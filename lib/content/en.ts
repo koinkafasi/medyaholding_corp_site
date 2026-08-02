@@ -119,6 +119,12 @@ export const en: Dictionary = {
     items: ["Media", "Technology", "Product", "Brand", "Venture Building"],
   },
 
+  partnerInvite: {
+    title: "We'd Love to Add Your Logo Here",
+    subtitle: "A growing list of companies we build with — get in touch if that could be you.",
+    cta: "START A CONVERSATION",
+  },
+
   latestProject: {
     label: "Where We Operate",
     title: ["Five Disciplines,", "One Holding"],

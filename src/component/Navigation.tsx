@@ -29,12 +29,18 @@ export default function Navigation() {
           <Link
             key={index}
             href={item.path}
-            className="group relative block h-[24px] overflow-hidden cursor-pointer text-[16px] whitespace-nowrap pr-[2px]"
+            className="group relative block h-[24px] w-max shrink-0 overflow-hidden cursor-pointer text-[16px] whitespace-nowrap"
           >
+            {/* Invisible bold clone reserves the (wider) max-content width so
+                the box never has to shrink-to-fit around the lighter-weight
+                visible span, which is what caused the subpixel clipping. */}
+            <span aria-hidden="true" className="invisible block font-bold">
+              {item.name}
+            </span>
             <span
               className={clsx(
-                "block transition-transform duration-300 ease-out group-hover:-translate-y-full",
-                isActive ? "font-bold text-white" : "font-regular text-[#8D8D8D]"
+                "absolute inset-0 block transition-transform duration-300 ease-out group-hover:-translate-y-full",
+                isActive ? "font-bold text-white" : "font-normal text-[#8D8D8D]"
               )}
             >
               {item.name}

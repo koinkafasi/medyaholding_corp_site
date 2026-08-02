@@ -9,6 +9,7 @@ import { useRef } from "react";
 import Hero from "@/src/page-section/home/Hero";
 import AboutUs from "@/src/page-section/about/AboutUs";
 import LogoPartners from "@/src/page-section/home/LogoPartners";
+import PartnerInvite from "@/src/page-section/home/PartnerInvite";
 import ValueProposition from "@/src/page-section/home/ValueProposition";
 import StackShowcase from "@/src/page-section/home/StackShowcase";
 import FocusAreas from "@/src/page-section/home/FocusAreas";
@@ -43,6 +44,7 @@ export default function Home() {
         <AboutUs />
       </div>
       <LogoPartners />
+      <PartnerInvite />
       <ValueProposition />
       <StackShowcase />
       <FocusAreas />

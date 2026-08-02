@@ -119,6 +119,12 @@ export const tr: Dictionary = {
     items: ["Medya", "Teknoloji", "Ürün", "Marka", "Girişim Kurma"],
   },
 
+  partnerInvite: {
+    title: "Logonuzu Burada Görmek İsteriz",
+    subtitle: "Birlikte inşa ettiğimiz şirketlerin büyüyen bir listesi — bu siz olabilirsiniz, bize ulaşın.",
+    cta: "BİR SOHBET BAŞLATIN",
+  },
+
   latestProject: {
     label: "Faaliyet Alanlarımız",
     title: ["Beş Disiplin,", "Tek Bir Holding"],

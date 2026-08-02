@@ -72,6 +72,8 @@ export interface Dictionary {
 
   logoPartners: { label: string; items: string[] };
 
+  partnerInvite: { title: string; subtitle: string; cta: string };
+
   latestProject: { label: string; title: string[]; cta: string };
 
   homeServices: {
