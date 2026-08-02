@@ -57,7 +57,7 @@ export default function AboutUs() {
 
     return (
         <div className="bg-white dark:bg-[#070707] w-full px-[20px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col md:flex-row justify-between items-stretch gap-[24px]">
-            <div className="flex flex-col items-start gap-[24px] w-full md:w-[42%] shrink-0">
+            <div className="flex flex-col items-start gap-[24px] w-full md:w-[32%] shrink-0">
                 <Tag>
                     <Typography size={14} sizeMobile={12} weight={500}>{dict.nav.about}</Typography>
                 </Tag>
