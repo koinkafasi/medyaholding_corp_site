@@ -29,6 +29,17 @@ export interface Dictionary {
 
   header: { contactUs: string };
 
+  sectionNav: {
+    hero: string;
+    about: string;
+    partners: string;
+    value: string;
+    stack: string;
+    focus: string;
+    services: string;
+    cta: string;
+  };
+
   footer: {
     ctaTitle: string;
     ctaSubtitle: string;

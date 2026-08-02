@@ -22,6 +22,17 @@ export const tr: Dictionary = {
 
   header: { contactUs: "İLETİŞİME GEÇ" },
 
+  sectionNav: {
+    hero: "Giriş",
+    about: "Hakkımızda",
+    partners: "İş Ortakları",
+    value: "Değer Önerisi",
+    stack: "Portföy",
+    focus: "Odak Alanları",
+    services: "Hizmetler",
+    cta: "İletişim",
+  },
+
   footer: {
     ctaTitle: "Portföydeki Bir Sonraki Şirketi İnşa Ediyoruz",
     ctaSubtitle: "Değer katacak bir şey inşa ediyorsanız, sizden haber almak isteriz.",

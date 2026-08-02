@@ -22,6 +22,17 @@ export const en: Dictionary = {
 
   header: { contactUs: "CONTACT US" },
 
+  sectionNav: {
+    hero: "Intro",
+    about: "About",
+    partners: "Partners",
+    value: "Value",
+    stack: "Portfolio",
+    focus: "Focus Areas",
+    services: "Services",
+    cta: "Contact",
+  },
+
   footer: {
     ctaTitle: "Building the Next Company in the Portfolio",
     ctaSubtitle: "If you are building something worth backing, we would like to hear about it.",
