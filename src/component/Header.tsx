@@ -2,11 +2,15 @@
 
 import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
-import Link from "next/link";
+import { useLocale } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Navigation from "./Navigation";
 import Logo from "@/src/assets/images/Logo.svg";
 import Switch from "./Switch";
 import Icons from "./Icons";
+import LanguageToggle from "./LanguageToggle";
+import { getDictionary } from "@/lib/content";
+import type { Locale } from "@/lib/content/types";
 
 interface HeaderProps {
   mobileOpen: boolean;
@@ -14,6 +18,7 @@ interface HeaderProps {
 }
 
 export default function Header({ mobileOpen = false, onOpenMobileNav }: HeaderProps) {
+  const dict = getDictionary(useLocale() as Locale);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isIdle, setIsIdle] = useState(false);
@@ -78,12 +83,13 @@ export default function Header({ mobileOpen = false, onOpenMobileNav }: HeaderPr
 
       {/* Desktop CTA */}
       <div className="hidden lg:flex justify-between items-center gap-[32px]">
+        <LanguageToggle className="text-white" />
         <Switch />
         <Link
           href="/contact"
           className="flex justify-between items-center gap-[8px] text-white cursor-pointer"
         >
-          CONTACT US <Icons name="arrowRight" className="w-5" />
+          {dict.header.contactUs} <Icons name="arrowRight" className="w-5" />
         </Link>
       </div>
 

@@ -2,40 +2,35 @@
 
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { useTheme } from "@/src/context/ThemeProvider";
-import Link from "next/link";
+import { useLocale } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 import Image from "next/image";
 import Icons from "@/src/component/Icons";
 import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
+import { getDictionary } from "@/lib/content";
+import type { Locale } from "@/lib/content/types";
 
 import Services1 from '@/src/assets/images/service-1.png';
 import Services2 from '@/src/assets/images/service-2.png';
 import Services3 from '@/src/assets/images/service-3.png';
 
+const IMAGES = [Services1, Services2, Services3];
 
 export default function Services() {
     const { theme } = useTheme();
+    const dict = getDictionary(useLocale() as Locale);
     const cardsRef = useRef<HTMLDivElement[]>([]);
+    const listRef = useRef<HTMLDivElement>(null);
 
-    const services = [
-        {
-            title: "SEO & Content Marketing",
-            image: Services1,
-            desc: "Boost visibility and engagement with powerful SEO strategies and compelling content that drive traffic, enhance rankings, and maximize conversions.",
-        },
-        {
-            title: "Pay-Per-Click (PPC) Advertising",
-            image: Services2,
-            desc: "Boost visibility and engagement with powerful SEO strategies and compelling content that drive traffic, enhance rankings, and maximize conversions.",
-        },
-        {
-            title: "Social Media Management",
-            image: Services3,
-            desc: "Boost visibility and engagement with powerful SEO strategies and compelling content that drive traffic, enhance rankings, and maximize conversions.",
-        },
-    ];
+    const services = dict.homeServices.items.map((item, idx) => ({
+        title: item.title,
+        image: IMAGES[idx],
+        desc: item.desc,
+    }));
 
     useEffect(() => {
         cardsRef.current.forEach((card) => {
@@ -62,30 +57,49 @@ export default function Services() {
             });
         });
     }, [theme]);
+
+    useGSAP(() => {
+        if (!listRef.current) return;
+        gsap.fromTo(
+            cardsRef.current,
+            { autoAlpha: 0, y: 40 },
+            {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.8,
+                ease: "power3.out",
+                stagger: 0.15,
+                scrollTrigger: {
+                    trigger: listRef.current,
+                    start: "top 75%",
+                },
+            }
+        );
+    }, []);
     return (
         <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[8px] md:px-[12px] w-full">
             <div className="bg-[#070707] dark:bg-[#1D1D1D] rounded-[20px] py-[64px] px-[16px] md:p-[60px]">
                 <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end self-stretch gap-[16px]">
                     <div className="flex flex-col items-start gap-[24px]">
-                        <Tag color="#fff">Our Services</Tag>
+                        <Tag color="#fff">{dict.homeServices.label}</Tag>
                         <Typography as="div" color="#fff" noDarkMode size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6}>
-                            Digital Solutions for <br />
-                            Business Growth
+                            {dict.homeServices.title[0]} <br />
+                            {dict.homeServices.title[1]}
                         </Typography>
                     </div>
                     <div className="flex flex-col items-start gap-[48px] lg:gap-[14px] w-full lg:w-[35%]">
                         <Typography size={14} noDarkMode color="#fff">
-                            From branding to performance marketing, we deliver data-driven solutions that drive engagement, boost conversions, and accelerate growth.
+                            {dict.homeServices.subtitle}
                         </Typography>
                         <div className="flex gap-[8px] cursor-pointer">
                             <Link href="/services">
-                                <Typography size={16} weight={500} noDarkMode color="#fff">SEE MORE</Typography>
+                                <Typography size={16} weight={500} noDarkMode color="#fff">{dict.homeServices.cta}</Typography>
                             </Link>
                             <Icons name="arrowRight" className="w-5" color="#fff" />
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-start gap-[51px] mt-[48px] md:mt-[64px]">
+                <div ref={listRef} className="flex flex-col items-start gap-[51px] mt-[48px] md:mt-[64px]">
                     {services.map((service, idx) => (
                         <div
                             key={idx}

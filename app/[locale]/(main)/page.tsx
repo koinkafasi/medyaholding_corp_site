@@ -13,7 +13,6 @@ const LogoPartners = React.lazy(() => import("@/src/page-section/home/LogoPartne
 const Services = React.lazy(() => import("@/src/page-section/home/Services"));
 const Pricing = React.lazy(() => import("@/src/page-section/PricingSection"));
 const Faq = React.lazy(() => import("@/src/page-section/Faq"));
-const Testimonials = React.lazy(() => import("@/src/page-section/Testimonials"));
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -21,13 +20,13 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function Home() {
-  const testimonialRef = useRef<HTMLDivElement | null>(null);
+  const nextSectionRef = useRef<HTMLDivElement | null>(null);
 
-  const scrollToTestimonials = () => {
-    if (testimonialRef.current) {
+  const scrollToNextSection = () => {
+    if (nextSectionRef.current) {
       gsap.to(window, {
         duration: 1.2,
-        scrollTo: { y: testimonialRef.current, offsetY: 50 },
+        scrollTo: { y: nextSectionRef.current, offsetY: 50 },
         ease: "power2.inOut",
       });
     }
@@ -36,16 +35,15 @@ export default function Home() {
   return (
     <div className="">
       <Suspense>
-        <Hero onScrollToTestimonials={scrollToTestimonials} />
-        <AboutUs />
+        <Hero onScrollToTestimonials={scrollToNextSection} />
+        <div ref={nextSectionRef}>
+          <AboutUs />
+        </div>
         <LatestProject />
         <LogoPartners />
         <Services />
         <Pricing />
         <Faq />
-        <div ref={testimonialRef}>
-          <Testimonials />
-        </div>
       </Suspense>
     </div>
   )

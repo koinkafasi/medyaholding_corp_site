@@ -1,17 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import clsx from "clsx";
-
-const navItems = [
-  { name: "Home", path: "/" },
-  { name: "About us", path: "/about" },
-  { name: "Portfolio", path: "/portofolio" },
-  { name: "Services", path: "/services" },
-  { name: "Pricing", path: "/pricing" },
-  { name: "Contact Us", path: "/contact" },
-];
+import { getDictionary } from "@/lib/content";
+import type { Locale } from "@/lib/content/types";
+import LanguageToggle from "./LanguageToggle";
 
 interface MobileNavigationProps {
   open: boolean;
@@ -20,6 +14,16 @@ interface MobileNavigationProps {
 
 export default function MobileNavigation({ open = false, handleOpen }: MobileNavigationProps) {
   const pathname = usePathname();
+  const dict = getDictionary(useLocale() as Locale);
+
+  const navItems = [
+    { name: dict.nav.home, path: "/" },
+    { name: dict.nav.about, path: "/about" },
+    { name: dict.nav.portfolio, path: "/portofolio" },
+    { name: dict.nav.services, path: "/services" },
+    { name: dict.nav.pricing, path: "/pricing" },
+    { name: dict.nav.contact, path: "/contact" },
+  ];
 
   return (
     <div
@@ -54,6 +58,10 @@ export default function MobileNavigation({ open = false, handleOpen }: MobileNav
           );
         })}
       </nav>
+
+      <div className="relative z-10 mt-[40px]">
+        <LanguageToggle />
+      </div>
     </div>
   );
 }

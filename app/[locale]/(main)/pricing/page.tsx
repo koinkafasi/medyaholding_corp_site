@@ -8,7 +8,6 @@ const Hero = React.lazy(() => import('@/src/page-section/pricing/Hero'));
 const Benefits = React.lazy(() => import('@/src/page-section/pricing/Benefits'));
 const PricingSection = React.lazy(() => import('@/src/page-section/PricingSection'));
 const Faq = React.lazy(() => import('@/src/page-section/Faq'));
-const Testimonials = React.lazy(() => import('@/src/page-section/Testimonials'));
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -22,7 +21,6 @@ export default function Pricing() {
                 <Benefits />
                 <PricingSection />
                 <Faq />
-                <Testimonials />
             </Suspense>
         </div>
     )

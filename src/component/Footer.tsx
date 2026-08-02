@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useLocale } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Button from "./Button";
 
 import Logo from "@/src/assets/images/Logo.svg";
@@ -9,8 +10,12 @@ import InstagramLogo from "@/src/assets/images/InstagramLogo.svg";
 import LinkedinLogo from "@/src/assets/images/LinkedinLogo.svg";
 import IcCopyRight from "@/src/assets/icons/copyRight.svg";
 import Icons from "./Icons";
+import { getDictionary } from "@/lib/content";
+import type { Locale } from "@/lib/content/types";
 
 export default function Footer() {
+  const dict = getDictionary(useLocale() as Locale);
+
   return (
     <div className="relative overflow-hidden bg-[#070707]">
       {/* Background Blur Elements */}
@@ -26,14 +31,14 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between w-full md:pr-[80px] gap-[32px]">
           <div className="flex flex-col gap-[16px] w-full lg:w-[60%]">
             <div className="text-[#fff] text-[32px] md:text-[40px] font-semibold leading-[41px] md:leading-[48px]">
-              Drive Quality Leads, Maximize Growth, Convert More Customers!
+              {dict.footer.ctaTitle}
             </div>
             <div className="text-[#fff] text-[14px]">
-              Boost your business with targeted strategies that attract high-quality leads, enhance conversions, and accelerate
+              {dict.footer.ctaSubtitle}
             </div>
           </div>
           <Link href="/contact">
-            <Button variant="secondary">GET STARTED</Button>
+            <Button variant="secondary">{dict.pricingSection.getStarted}</Button>
           </Link>
         </div>
 
@@ -43,7 +48,7 @@ export default function Footer() {
           <div className="flex flex-col gap-[24px] w-[70%] lg:w-[20%]">
             <Logo className="w-full h-auto" />
             <div className="font-medium text-white leading-[24px]">
-              We Drive Real Result, More Traffic, More Leads, more Growth!
+              {dict.footer.tagline}
             </div>
             <div className="flex items-center gap-[15px]">
               <div className="bg-[#1D1D1D] rounded-full p-[10px]">
@@ -61,33 +66,21 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="flex items-start justify-between w-full lg:w-[35%] md:gap-[100px]">
             <div>
-              <div className="text-[#8D8D8D] mb-[24px]">Main Menu</div>
+              <div className="text-[#8D8D8D] mb-[24px]">{dict.footer.mainMenuTitle}</div>
               <div className="flex flex-col items-start gap-[16px] text-white">
-                <Link href="/about" className="cursor-pointer">About Us</Link>
-                <Link href="/portofolio" className="cursor-pointer">Portofolio</Link>
-                <Link href="/services" className="cursor-pointer">Services</Link>
-                <Link href="/pricing" className="cursor-pointer">Pricing</Link>
-                <div className="cursor-pointer">Testimonial</div>
+                <Link href="/about" className="cursor-pointer">{dict.nav.about}</Link>
+                <Link href="/portofolio" className="cursor-pointer">{dict.nav.portfolio}</Link>
+                <Link href="/services" className="cursor-pointer">{dict.nav.services}</Link>
+                <Link href="/pricing" className="cursor-pointer">{dict.nav.pricing}</Link>
               </div>
             </div>
 
             <div>
-              <div className="text-[#8D8D8D] mb-[24px]">Company</div>
+              <div className="text-[#8D8D8D] mb-[24px]">{dict.footer.companyTitle}</div>
               <div className="flex flex-col items-start gap-[16px] text-white">
-                <div className="cursor-pointer">Career</div>
-                <div className="cursor-pointer">Our Teams</div>
-                <div className="cursor-pointer">FAQ’s</div>
-                <div className="cursor-pointer">Contact Us</div>
-              </div>
-            </div>
-
-            <div>
-              <div className="text-[#8D8D8D] mb-[24px]">Resources</div>
-              <div className="flex flex-col items-start gap-[16px] text-white">
-                <div className="cursor-pointer">Product</div>
-                <div className="cursor-pointer">Envato</div>
-                <div className="cursor-pointer">UI8</div>
-                <div className="cursor-pointer">Awwwards</div>
+                <div className="cursor-pointer">{dict.footer.careers}</div>
+                <div className="cursor-pointer">{dict.footer.faqLabel}</div>
+                <Link href="/contact" className="cursor-pointer">{dict.footer.contactUs}</Link>
               </div>
             </div>
           </div>
@@ -98,12 +91,12 @@ export default function Footer() {
           <div className="flex items-center gap-[8px]">
             <IcCopyRight className="w-5" />
             <div className="text-white font-medium">
-              2025 Adverza, All right reserved
+              {dict.footer.copyright}
             </div>
           </div>
-          <div className="flex justify-between items-center gap-[8px] text-white cursor-pointer">
-            CONTACT SUPPORT <Icons name="arrowRight" className="w-5" />
-          </div>
+          <Link href="/contact" className="flex justify-between items-center gap-[8px] text-white cursor-pointer">
+            {dict.footer.contactUs} <Icons name="arrowRight" className="w-5" />
+          </Link>
         </div>
       </div>
     </div>

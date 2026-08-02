@@ -1,19 +1,22 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import clsx from "clsx";
-
-const navItems = [
-  { name: "Home", path: "/" },
-  { name: "About us", path: "/about" },
-  { name: "Portfolio", path: "/portofolio" },
-  { name: "Services", path: "/services" },
-  { name: "Pricing", path: "/pricing" },
-];
+import { getDictionary } from "@/lib/content";
+import type { Locale } from "@/lib/content/types";
 
 export default function Navigation() {
   const pathname = usePathname();
+  const dict = getDictionary(useLocale() as Locale);
+
+  const navItems = [
+    { name: dict.nav.home, path: "/" },
+    { name: dict.nav.about, path: "/about" },
+    { name: dict.nav.portfolio, path: "/portofolio" },
+    { name: dict.nav.services, path: "/services" },
+    { name: dict.nav.pricing, path: "/pricing" },
+  ];
 
   return (
     <nav className="space-x-[40px] hidden lg:flex">
