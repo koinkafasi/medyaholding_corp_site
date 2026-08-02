@@ -19,9 +19,14 @@ export default function MobileNavigation({ open = false, handleOpen }: MobileNav
   const navItems = [
     { name: dict.nav.home, path: "/" },
     { name: dict.nav.about, path: "/about" },
+    { name: dict.nav.sectors, path: "/sectors" },
     { name: dict.nav.portfolio, path: "/portofolio" },
     { name: dict.nav.services, path: "/services" },
     { name: dict.nav.pricing, path: "/pricing" },
+    { name: dict.nav.careers, path: "/careers" },
+    { name: dict.nav.sustainability, path: "/sustainability" },
+    { name: dict.nav.investors, path: "/investors" },
+    { name: dict.nav.news, path: "/news" },
     { name: dict.nav.contact, path: "/contact" },
   ];
 

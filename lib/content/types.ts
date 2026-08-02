@@ -20,6 +20,11 @@ export interface Dictionary {
     services: string;
     pricing: string;
     contact: string;
+    sectors: string;
+    careers: string;
+    sustainability: string;
+    investors: string;
+    news: string;
   };
 
   header: { contactUs: string };
@@ -150,5 +155,46 @@ export interface Dictionary {
     title: string;
     subtitle: string;
     items: AccordionItem[];
+  };
+
+  sectorsHero: { title: string; subtitle: string };
+  sectors: {
+    eyebrow: string;
+    title: string[];
+    items: { title: string; desc: string; detail: string }[];
+  };
+
+  careersHero: { title: string; subtitle: string };
+  careers: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    values: FeatureItem[];
+    ctaTitle: string;
+    ctaSubtitle: string;
+    ctaLabel: string;
+  };
+
+  sustainabilityHero: { title: string; subtitle: string };
+  sustainability: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    pillars: FeatureItem[];
+  };
+
+  investorsHero: { title: string; subtitle: string };
+  investors: {
+    eyebrow: string;
+    title: string;
+    pendingNote: string;
+    contactLabel: string;
+  };
+
+  newsHero: { title: string; subtitle: string };
+  news: {
+    eyebrow: string;
+    title: string;
+    pendingNote: string;
   };
 }

@@ -13,6 +13,11 @@ export const tr: Dictionary = {
     services: "Hizmetler",
     pricing: "Fiyatlandırma",
     contact: "İletişim",
+    sectors: "Sektörlerimiz",
+    careers: "Kariyer",
+    sustainability: "Sürdürülebilirlik",
+    investors: "Yatırımcı İlişkileri",
+    news: "Haberler",
   },
 
   header: { contactUs: "İLETİŞİME GEÇ" },
@@ -257,5 +262,75 @@ export const tr: Dictionary = {
       { title: "Genellikle hangi aşamada dahil oluyorsunuz?", content: "Değişiyor. Bir fikirden şirket kurduğumuz da oldu, zaten ivme kazanmış ekipleri desteklediğimiz de — sabit olan şey belirli bir aşama değil, şirkete duyduğumuz gerçek inanç." },
       { title: "Sizinle nasıl bir görüşme başlatabilirim?", content: "İletişim sayfası üzerinden ne inşa ettiğinize dair kısa bir not ile bize ulaşın. Her mesajı gerçek bir kişi okuyor." },
     ],
+  },
+
+  sectorsHero: {
+    title: "Faaliyet Gösterdiğimiz Sektörler",
+    subtitle: "Medya Holding beş disiplin etrafında organize olmuştur — her biri diğerinin yan etkisi değil, kendi başına bir odak olarak yürütülür.",
+  },
+  sectors: {
+    eyebrow: "Sektörlerimiz",
+    title: ["Beş disiplin,", "tek bir operasyon standardı"],
+    items: [
+      { title: "Medya", desc: "Tek bir kampanya için değil, yıllar boyu sağlam kalacak editoryal ve marka işi.", detail: "Medya varlıklarını bir kampanya takvimi gibi değil, bir editör gibi yönetiyoruz — tek bir lansman etrafında değil, yıllar içinde bileşen kitleler ve formatlar inşa ediyoruz." },
+      { title: "Teknoloji", desc: "İlk prototipten ölçeklenen altyapıya, uçtan uca ürün geliştirme.", detail: "İlk çalışan prototipten gerçek, sürekli kullanımı taşıyan altyapıya kadar tüm katmanlarda mühendislik — inşa ettikleriyle birlikte kalan kişiler tarafından yapılır." },
+      { title: "Ürün", desc: "Belirsiz hedefleri, insanların gerçekten kullanmak istediği ürünlere dönüştürmek.", detail: "Ürün çalışması bir özellik listesiyle değil, gerçek bir problemle başlar — herhangi bir şey tasarlamadan veya inşa etmeden önce gerçekte ne istendiğini anlamaya zaman ayırıyoruz." },
+      { title: "Marka", desc: "Bir şirkete akılda kalıcı bir ses kazandıran kimlik ve konumlandırma işi.", detail: "Holding içindeki her şirket ortak bir şablon değil, kendine özgü bir kimlik kazanır — o şirketi gerçekten farklı kılan şey etrafında inşa edilir." },
+      { title: "Venture Building", desc: "İçindeki kurucu ve ekiplerle birlikte, şirketleri sıfırdan inşa etmek.", detail: "Etrafında gerçekten bir şirket kurmaya değer bir problem olduğunda, onu doğrudan inşa ediyoruz — günlük olarak yönetecek kurucu ve operatörlerle birlikte." },
+    ],
+  },
+
+  careersHero: {
+    title: "İşini Ciddiye Alan İnsanlarla İnşa Edin",
+    subtitle: "Küçük, odaklanmış bir ekibiz — her işe alım, holding'in nasıl çalıştığını değiştiriyor.",
+  },
+  careers: {
+    eyebrow: "Kariyer",
+    title: "Nasıl çalışıyoruz",
+    subtitle: "Seyirci değil, operatörüz — inşa ettiğimiz şirketlere uzaktan yönetmek yerine yakınız.",
+    values: [
+      { title: "Talimat yerine sahiplik", desc: "Sadece bir brief'i uygulayan değil, gerçek kararlar almasına güvendiğimiz insanları işe alıyoruz." },
+      { title: "Kadro sayısı yerine derinlik", desc: "Bilerek küçük, odaklanmış bir ekip kalıyoruz — daha az insan, işe daha yakın." },
+      { title: "Hızlı kazanç yerine uzun vade", desc: "Birkaç yıl sonra da hâlâ önemli olacak şeyler inşa ediyoruz." },
+    ],
+    ctaTitle: "Size uygun açık bir pozisyon görmüyor musunuz?",
+    ctaSubtitle: "Zanaatını ciddiye alan insanları duymaya her zaman açığız. Bize ulaşın ve üzerinde çalışmak istediğiniz şeyi anlatın.",
+    ctaLabel: "İletişime Geçin",
+  },
+
+  sustainabilityHero: {
+    title: "Kalıcı Olması Gereken Şeyler İnşa Etmek",
+    subtitle: "Sürdürülebilirlik yaklaşımımız, sonradan eklenen ayrı bir girişim değil, şirketleri nasıl inşa ettiğimizle başlar.",
+  },
+  sustainability: {
+    eyebrow: "Sürdürülebilirlik",
+    title: "Uzun vadeli sorumluluğu nasıl düşünüyoruz",
+    subtitle: "Genç bir holdingiz — bu, raporu ekli bitmiş bir program değil, doğru inşa ettiğimiz standarttır.",
+    pillars: [
+      { title: "Çıkış için değil, kalıcı olmak için inşa edilir", desc: "Hızlı bir getiri için değil, kalıcı bir şey inşa etmenin gerektirdiği kadar süre şirketleri destekliyoruz." },
+      { title: "Sorumlu büyüme", desc: "Bir şirketi hızlı büyütmek yerine doğru büyütmeyi tercih ederiz — kalıcılık önce gelir." },
+      { title: "Şirketlerimizin içindeki insanlara karşı sorumluluk", desc: "Holding içinde operasyonu yürüten ekipler, onu gün be gün gerçek kılan kişilerdir." },
+    ],
+  },
+
+  investorsHero: {
+    title: "Yatırımcı İlişkileri",
+    subtitle: "Medya Holding'in mevcut ve potansiyel yatırımcıları için bilgiler.",
+  },
+  investors: {
+    eyebrow: "Yatırımcı İlişkileri",
+    title: "Bu bölüm hazırlanıyor",
+    pendingNote: "Finansal raporlar, kamuyu aydınlatma bildirimleri ve yatırımcı materyalleri hazır olduklarında burada yayınlanacaktır. Bu süre zarfında yatırımcı soruları için doğrudan bize ulaşabilirsiniz.",
+    contactLabel: "Yatırımcı İlişkileri ile İletişime Geçin",
+  },
+
+  newsHero: {
+    title: "Haberler",
+    subtitle: "Medya Holding genelinden duyurular ve güncellemeler.",
+  },
+  news: {
+    eyebrow: "Haberler",
+    title: "Henüz duyuru yok",
+    pendingNote: "Gerçekleştikçe buraya gerçek güncellemeler yayınlayacağız — yer tutucu ya da geriye dönük tarihli hiçbir şey olmadan.",
   },
 };

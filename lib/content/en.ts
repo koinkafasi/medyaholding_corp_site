@@ -13,6 +13,11 @@ export const en: Dictionary = {
     services: "Services",
     pricing: "Pricing",
     contact: "Contact Us",
+    sectors: "Sectors",
+    careers: "Careers",
+    sustainability: "Sustainability",
+    investors: "Investor Relations",
+    news: "News",
   },
 
   header: { contactUs: "CONTACT US" },
@@ -257,5 +262,75 @@ export const en: Dictionary = {
       { title: "What stage do you typically get involved at?", content: "It varies. We have built companies from an idea and backed teams that already had traction — the constant is real conviction in the company, not a fixed stage." },
       { title: "How do I start a conversation with you?", content: "Reach out through the contact page with a short note on what you're building. A real person reads every message." },
     ],
+  },
+
+  sectorsHero: {
+    title: "The Sectors We Operate In",
+    subtitle: "Medya Holding is organized around five disciplines — each run as its own focus, not a side effect of the others.",
+  },
+  sectors: {
+    eyebrow: "Sectors",
+    title: ["Five disciplines,", "one operating standard"],
+    items: [
+      { title: "Media", desc: "Editorial and brand work built to hold up over years, not a single campaign.", detail: "We operate media properties the way an editor would, not the way a campaign calendar would — building audiences and formats meant to compound over years rather than around a single launch." },
+      { title: "Technology", desc: "Full-stack product development, from a first prototype to infrastructure that scales.", detail: "Engineering across the stack: from a first working prototype through to the infrastructure that carries real, sustained usage — built by people who stay with what they ship." },
+      { title: "Product", desc: "Translating ambiguous goals into products people actually want to use.", detail: "Product work starts with a real problem, not a feature list — we spend the time to understand what's actually being asked for before we design or build anything." },
+      { title: "Brand", desc: "Identity and positioning work that gives a company a voice worth remembering.", detail: "Every company inside the holding gets a distinct identity — not a shared template — built around what actually makes that company different." },
+      { title: "Venture Building", desc: "Building companies from the ground up alongside the founders and teams inside them.", detail: "Where there's a real problem worth building a company around, we build it directly — alongside the founders and operators who will run it day to day." },
+    ],
+  },
+
+  careersHero: {
+    title: "Build With People Who Take the Work Seriously",
+    subtitle: "We are a small, focused team — every hire changes how the holding operates.",
+  },
+  careers: {
+    eyebrow: "Careers",
+    title: "How we work",
+    subtitle: "We are operators, not spectators — close to the companies we build, not managing them from a distance.",
+    values: [
+      { title: "Ownership over instructions", desc: "We hire people we trust to make real decisions, not just execute a brief." },
+      { title: "Depth over headcount", desc: "We stay a small, focused team on purpose — fewer people, closer to the work." },
+      { title: "Long-term over quick wins", desc: "We build things meant to still matter a few years from now." },
+    ],
+    ctaTitle: "Don't see an open role that fits?",
+    ctaSubtitle: "We're always open to hearing from people who take their craft seriously. Reach out and tell us what you'd want to work on.",
+    ctaLabel: "Get in Touch",
+  },
+
+  sustainabilityHero: {
+    title: "Building Things Meant to Last",
+    subtitle: "Our approach to sustainability starts with how we build companies, not a separate initiative bolted on afterward.",
+  },
+  sustainability: {
+    eyebrow: "Sustainability",
+    title: "How we think about long-term responsibility",
+    subtitle: "We're a young holding — this is the standard we're building toward, not a finished program with a report attached.",
+    pillars: [
+      { title: "Built to last, not to exit", desc: "We back companies for the years it takes to build something durable, not for a fast return." },
+      { title: "Responsible growth", desc: "We'd rather grow a company correctly than grow it quickly — durability comes first." },
+      { title: "Accountable to the people inside our companies", desc: "The teams operating inside the holding are the ones who make it real, day to day." },
+    ],
+  },
+
+  investorsHero: {
+    title: "Investor Relations",
+    subtitle: "Information for current and prospective investors in Medya Holding.",
+  },
+  investors: {
+    eyebrow: "Investor Relations",
+    title: "This section is being prepared",
+    pendingNote: "Financial reports, disclosures and investor materials will be published here as they become available. For investor inquiries in the meantime, please reach out directly.",
+    contactLabel: "Contact Investor Relations",
+  },
+
+  newsHero: {
+    title: "News",
+    subtitle: "Announcements and updates from across Medya Holding.",
+  },
+  news: {
+    eyebrow: "News",
+    title: "No announcements yet",
+    pendingNote: "We'll publish real updates here as they happen — nothing placeholder, nothing backdated.",
   },
 };

@@ -13,13 +13,15 @@ export default function Navigation() {
   const navItems = [
     { name: dict.nav.home, path: "/" },
     { name: dict.nav.about, path: "/about" },
+    { name: dict.nav.sectors, path: "/sectors" },
     { name: dict.nav.portfolio, path: "/portofolio" },
     { name: dict.nav.services, path: "/services" },
     { name: dict.nav.pricing, path: "/pricing" },
+    { name: dict.nav.careers, path: "/careers" },
   ];
 
   return (
-    <nav className="space-x-[40px] hidden lg:flex">
+    <nav className="space-x-[32px] hidden lg:flex">
       {navItems.map((item, index) => {
         const isActive = pathname === item.path;
 
@@ -27,14 +29,22 @@ export default function Navigation() {
           <Link
             key={index}
             href={item.path}
-            className={clsx(
-              "cursor-pointer text-[16px] hover:text-white hover:font-bold transition-colors duration-200",
-              isActive
-                ? "font-bold text-white"
-                : "font-regular text-[#8D8D8D]"
-            )}
+            className="group relative block h-[20px] overflow-hidden cursor-pointer text-[16px]"
           >
-            {item.name}
+            <span
+              className={clsx(
+                "block transition-transform duration-300 ease-out group-hover:-translate-y-full",
+                isActive ? "font-bold text-white" : "font-regular text-[#8D8D8D]"
+              )}
+            >
+              {item.name}
+            </span>
+            <span
+              aria-hidden="true"
+              className="absolute inset-0 block translate-y-full font-bold text-white transition-transform duration-300 ease-out group-hover:translate-y-0"
+            >
+              {item.name}
+            </span>
           </Link>
         );
       })}

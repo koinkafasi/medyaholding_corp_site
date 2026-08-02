@@ -64,11 +64,12 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex items-start justify-between w-full lg:w-[35%] md:gap-[100px]">
+          <div className="flex flex-wrap items-start justify-between w-full lg:w-[55%] gap-[32px] md:gap-[40px]">
             <div>
               <div className="text-[#8D8D8D] mb-[24px]">{dict.footer.mainMenuTitle}</div>
               <div className="flex flex-col items-start gap-[16px] text-white">
                 <Link href="/about" className="cursor-pointer">{dict.nav.about}</Link>
+                <Link href="/sectors" className="cursor-pointer">{dict.nav.sectors}</Link>
                 <Link href="/portofolio" className="cursor-pointer">{dict.nav.portfolio}</Link>
                 <Link href="/services" className="cursor-pointer">{dict.nav.services}</Link>
                 <Link href="/pricing" className="cursor-pointer">{dict.nav.pricing}</Link>
@@ -78,9 +79,18 @@ export default function Footer() {
             <div>
               <div className="text-[#8D8D8D] mb-[24px]">{dict.footer.companyTitle}</div>
               <div className="flex flex-col items-start gap-[16px] text-white">
-                <div className="cursor-pointer">{dict.footer.careers}</div>
+                <Link href="/careers" className="cursor-pointer">{dict.footer.careers}</Link>
+                <Link href="/sustainability" className="cursor-pointer">{dict.nav.sustainability}</Link>
                 <div className="cursor-pointer">{dict.footer.faqLabel}</div>
                 <Link href="/contact" className="cursor-pointer">{dict.footer.contactUs}</Link>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-[#8D8D8D] mb-[24px]">{dict.nav.investors}</div>
+              <div className="flex flex-col items-start gap-[16px] text-white">
+                <Link href="/investors" className="cursor-pointer">{dict.nav.investors}</Link>
+                <Link href="/news" className="cursor-pointer">{dict.nav.news}</Link>
               </div>
             </div>
           </div>
