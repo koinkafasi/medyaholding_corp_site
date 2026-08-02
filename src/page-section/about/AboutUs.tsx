@@ -58,7 +58,7 @@ export default function AboutUs() {
     return (
         <div className="bg-white dark:bg-[#070707] w-full px-[20px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col md:flex-row justify-between items-start gap-[24px]">
             <Tag>
-                <Typography size={14} sizeMobile={12} weight={500}>About Us</Typography>
+                <Typography size={14} sizeMobile={12} weight={500}>{dict.nav.about}</Typography>
             </Tag>
             <div className="w-full md:w-[65%] flex flex-col gap-[48px] md:gap-[80px]">
                 <div key={descAboutUs} ref={descAboutUsRef} className="text-[28px] md:text-[40px] font-semibold leading-[36.8px] md:leading-[48px]" style={{ whiteSpace: "pre-wrap" }}>
