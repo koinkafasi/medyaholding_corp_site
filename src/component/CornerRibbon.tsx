@@ -38,7 +38,7 @@ export default function CornerRibbon() {
 
     return (
         <div
-            className="absolute top-[28px] right-[-96px] w-[340px] rotate-45 bg-[#1146F2] py-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.35)] overflow-hidden"
+            className="absolute top-[128px] md:top-[148px] right-[-96px] w-[340px] rotate-45 bg-gradient-to-r from-[#873AE3] to-[#1146F2] py-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.35)] overflow-hidden"
             aria-hidden="true"
         >
             <div ref={trackRef} className="flex items-center gap-[10px] whitespace-nowrap w-max">
