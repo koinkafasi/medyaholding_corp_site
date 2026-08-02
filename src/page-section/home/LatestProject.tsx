@@ -14,9 +14,11 @@ import { getDictionary } from "@/lib/content";
 import type { Locale } from "@/lib/content/types";
 
 import Eclipse from '@/src/assets/images/lates-project-eclipse.png';
-import Portofolio1 from '@/src/assets/images/Portfolio-1.png';
-import Portofolio2 from '@/src/assets/images/Portfolio-2.png';
-import Portofolio3 from '@/src/assets/images/Portfolio-3.png';
+import SectorMedia from '@/src/assets/images/generated/sector-media.png';
+import SectorTechnology from '@/src/assets/images/generated/sector-technology.png';
+import SectorProduct from '@/src/assets/images/generated/sector-product.png';
+
+const IMAGES = [SectorMedia, SectorTechnology, SectorProduct];
 
 export default function LatestProject() {
     const dict = getDictionary(useLocale() as Locale);
@@ -55,25 +57,19 @@ export default function LatestProject() {
                         {dict.latestProject.title[1]} <Image src={Eclipse} alt="Eclipse" className="inline w-10 md:w-20" />
                     </div>
                 </div>
-                <Link href="/portofolio">
+                <Link href="/sectors">
                     <div className="flex gap-[10px] border-b border-[#070707] dark:border-[#fff] cursor-pointer">
                         <Typography size={16} weight={500}>{dict.latestProject.cta}</Typography>
                         <Icons name="arrowRight" className="w-5" />
                     </div>
                 </Link>
             </div>
-            <div ref={gridRef} className="mt-[64px] grid grid-rows-[auto_1fr] gap-3">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div className="project-card aspect-[16/9] w-full md:aspect-auto overflow-hidden">
-                        <Image src={Portofolio1} alt="Selected work" className="w-full h-full object-cover" />
+            <div ref={gridRef} className="mt-[64px] grid grid-cols-1 md:grid-cols-3 gap-3">
+                {IMAGES.map((img, idx) => (
+                    <div key={idx} className="project-card aspect-[4/5] w-full overflow-hidden rounded-[12px]">
+                        <Image src={img} alt="" className="w-full h-full object-cover" />
                     </div>
-                    <div className="project-card aspect-[16/9] w-full md:aspect-auto overflow-hidden">
-                        <Image src={Portofolio2} alt="Selected work" className="w-full h-full object-cover" />
-                    </div>
-                </div>
-                <div className="project-card aspect-[16/9] w-full md:aspect-auto overflow-hidden">
-                    <Image src={Portofolio3} alt="Selected work" className="w-full h-full object-cover" />
-                </div>
+                ))}
             </div>
         </div>
     )

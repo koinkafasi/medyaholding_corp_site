@@ -1,22 +1,15 @@
 "use client";
-import { useState } from "react";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 import Icons from "@/src/component/Icons";
 import Tag from "@/src/component/Tag"
 import Typography from "@/src/component/Typography"
-import Toggle from "@/src/component/Toggle"
 import { getDictionary } from "@/lib/content";
 import type { Locale } from "@/lib/content/types";
 
 export default function PricingSection() {
     const dict = getDictionary(useLocale() as Locale);
-    const [selected, setSelected] = useState<string>('Monthly');
-
-    const handleToggle = (value: string) => {
-        setSelected(value);
-    };
     return (
         <div className="bg-white dark:bg-[#070707] w-full px-[16px] md:px-[72px] py-[80px] flex flex-col items-center gap-[24px]">
             <Tag>
@@ -32,17 +25,13 @@ export default function PricingSection() {
                     </Typography>
                 </div>
             </div>
-            <Toggle textLeft={dict.pricingSection.toggleMonthly} textRight={dict.pricingSection.toggleAnnually} onToggle={handleToggle} />
             <div className="bg-[#EEE] dark:bg-[#1D1D1D] flex flex-col lg:flex-row items-start gap-[24px] p-[24px] rounded-[20px] w-full md:w-[75%]">
                 <div className="w-full lg:w-[50%] rounded-[12px] p-[24px] cursor-pointer hover:bg-white group hover:dark:bg-[#393939] transition-all duration-300">
                     <Typography size={32} weight={600} lineHeight={40}>
                         {dict.pricingSection.standardPlan}
                     </Typography>
-                    <Typography as="div" size={40} weight={600} lineHeight={48} className="mt-[24px] flex items-center gap-[8px]">
-                        $40 {selected === "Monthly" && (<Typography as="span" size={14}>{dict.pricingSection.perMonth}</Typography>)}
-                    </Typography>
                     <Typography as="div" size={14} lineHeight={24} className="mt-[12px]">
-                        {dict.pricingSection.planDesc}
+                        {dict.pricingSection.standardDesc}
                     </Typography>
                     <Link href="/contact">
                         <div className="my-[32px] rounded-full border  border-[#1D1D1D] dark:border-[#fff] dark:text-[#fff] py-[18px] flex items-center justify-center group-hover:bg-[#1146F2] group-hover:border-[#1146F2] group-hover:text-white group-hover:dark:text-[#070707]">
@@ -50,7 +39,7 @@ export default function PricingSection() {
                         </div>
                     </Link>
                     <div className="flex flex-col items-start gap-[12px] dark:text-[#fff]">
-                        {dict.pricingSection.features.map((feature, idx) => (
+                        {dict.pricingSection.standardFeatures.map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-[16px]">
                                 <Icons name="arrowUpRight" className="w-5" />
                                 {feature}
@@ -65,11 +54,8 @@ export default function PricingSection() {
                     <Typography size={32} weight={600} lineHeight={40}>
                         {dict.pricingSection.premiumPlan}
                     </Typography>
-                    <Typography as="div" size={40} weight={600} lineHeight={48} className="mt-[24px] flex items-center gap-[8px]">
-                        $80 {selected === "Monthly" && (<Typography as="span" size={14}>{dict.pricingSection.perMonth}</Typography>)}
-                    </Typography>
                     <Typography as="div" size={14} lineHeight={24} className="mt-[12px]">
-                        {dict.pricingSection.planDesc}
+                        {dict.pricingSection.premiumDesc}
                     </Typography>
                     <Link href="/contact">
                         <div className="my-[32px] rounded-full border border-[#1D1D1D] dark:border-[#fff] dark:text-[#fff] py-[18px] flex items-center justify-center group-hover:bg-[#1146F2] group-hover:border-[#1146F2] group-hover:text-white group-hover:dark:text-[#070707]">
@@ -77,7 +63,7 @@ export default function PricingSection() {
                         </div>
                     </Link>
                     <div className="flex flex-col items-start gap-[12px] dark:text-[#fff]">
-                        {dict.pricingSection.features.map((feature, idx) => (
+                        {dict.pricingSection.premiumFeatures.map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-[16px]">
                                 <Icons name="arrowUpRight" className="w-5" />
                                 {feature}

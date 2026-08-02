@@ -123,15 +123,14 @@ export interface Dictionary {
     label: string;
     title: string;
     subtitle: string;
-    toggleMonthly: string;
-    toggleAnnually: string;
     standardPlan: string;
+    standardDesc: string;
+    standardFeatures: string[];
     premiumPlan: string;
-    planDesc: string;
-    perMonth: string;
+    premiumDesc: string;
+    premiumFeatures: string[];
     bestValue: string;
     getStarted: string;
-    features: string[];
   };
 
   contactHero: { title: string; subtitle: string; email: string };

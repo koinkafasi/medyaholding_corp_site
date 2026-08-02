@@ -11,11 +11,11 @@ import Typography from "@/src/component/Typography";
 import { getDictionary } from "@/lib/content";
 import type { Locale } from "@/lib/content/types";
 
-import Services1 from '@/src/assets/images/service-1.png';
-import Services2 from '@/src/assets/images/service-2.png';
-import Services3 from '@/src/assets/images/service-3.png';
-import Services4 from '@/src/assets/images/service-4.png';
-import Services5 from '@/src/assets/images/service-5.png';
+import Services1 from '@/src/assets/images/generated/sector-media.png';
+import Services2 from '@/src/assets/images/generated/sector-technology.png';
+import Services3 from '@/src/assets/images/generated/sector-venture.png';
+import Services4 from '@/src/assets/images/generated/sector-brand.png';
+import Services5 from '@/src/assets/images/generated/sector-product.png';
 
 const IMAGES = [Services1, Services2, Services3, Services4, Services5];
 

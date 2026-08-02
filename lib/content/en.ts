@@ -120,9 +120,9 @@ export const en: Dictionary = {
   },
 
   latestProject: {
-    label: "Latest Projects",
-    title: ["Showcasing Creativity,", "Inspiring Possibilities"],
-    cta: "SEE ALL PORTOFOLIO",
+    label: "Where We Operate",
+    title: ["Five Disciplines,", "One Holding"],
+    cta: "SEE ALL SECTORS",
   },
 
   homeServices: {
@@ -173,8 +173,8 @@ export const en: Dictionary = {
   },
 
   portfolioHero: {
-    title: "Companies We've Built and Backed",
-    subtitle: "A selection of the media, technology and product work across the holding.",
+    title: "How We Build and Back Companies",
+    subtitle: "The same discipline behind every company in the holding — whether we're building from scratch or backing a team already in motion.",
   },
 
   caseStudy: {
@@ -195,40 +195,41 @@ export const en: Dictionary = {
   },
 
   benefits: {
-    label: "Benefits",
-    title: ["Benefits of Upgrading to", "the Premium Plan"],
-    subtitle: "Get premium design talent at a predictable flat rate — versatile design solutions to meet your business needs. Choose your plan now!",
+    label: "Why Work With Us",
+    title: ["What You Get Working", "With the Holding"],
+    subtitle: "Whichever engagement model fits, the same operating standard applies across every company we touch.",
     items: [
-      { title: "Advanced Features & Tools", desc: "Unlock exclusive features, automation, and premium tools to enhance efficiency and performance." },
-      { title: "Priority Support & Assistance", desc: "Unlock exclusive features, automation, and premium tools to enhance efficiency and performance." },
-      { title: "Higher Limits & Customization", desc: "Unlock exclusive features, automation, and premium tools to enhance efficiency and performance." },
-      { title: "Better Performance & Insights", desc: "Unlock exclusive features, automation, and premium tools to enhance efficiency and performance." },
-      { title: "Exclusive Access to Updates", desc: "Unlock exclusive features, automation, and premium tools to enhance efficiency and performance." },
-      { title: "Enhanced Security & Reliability", desc: "Unlock exclusive features, automation, and premium tools to enhance efficiency and performance." },
+      { title: "Direct Access", desc: "You work with the people actually doing the work, not an account layer." },
+      { title: "Real Operating Experience", desc: "Media, technology and product disciplines under one roof, not outsourced piecemeal." },
+      { title: "Transparent Terms", desc: "Clear scopes agreed upfront — no hidden fees, no fine print that changes what you get." },
+      { title: "Long-Term Thinking", desc: "We build for what still matters in a few years, not just the next milestone." },
+      { title: "Proven Discipline", desc: "The same process behind every company in the portfolio, applied to your engagement too." },
+      { title: "A Real Partner", desc: "Hands-on involvement when it's warranted — not just a vendor relationship." },
     ],
   },
 
   pricingSection: {
-    label: "Pricing",
-    title: "Upgrade Today – Unlock More Features, More Power, More Growth!",
-    subtitle: "Investing in your growth has never been easier. Discover our flexible pricing plans and unlock a world of possibilities.",
-    toggleMonthly: "Monthly",
-    toggleAnnually: "Annually",
-    standardPlan: "Standard Plan",
-    premiumPlan: "Premium Plan",
-    planDesc: "Perfect for individuals and small businesses looking to establish their online presence.",
-    perMonth: "/Month",
-    bestValue: "Best Value!",
-    getStarted: "GET STARTED",
-    features: [
-      "Full Access to All Features",
-      "Higher Limits & Scalability",
-      "Priority Customer Support",
-      "Advanced Analytics & Insights",
-      "Seamless Integrations",
-      "Exclusive Early Access to New Features",
-      "Enhanced Security & Reliability",
+    label: "Engagement Models",
+    title: "Two Ways to Work With Us",
+    subtitle: "The right structure depends on what you're building and how involved you need us to be.",
+    standardPlan: "Advisory Engagement",
+    standardDesc: "For teams that need focused expertise on a specific problem — product, technology or brand — without a full operating commitment.",
+    standardFeatures: [
+      "Defined scope and timeline",
+      "Direct access to the team doing the work",
+      "Clear deliverables, agreed upfront",
+      "No long-term commitment required",
     ],
+    premiumPlan: "Operating Partnership",
+    premiumDesc: "For companies we build or back directly — hands-on involvement across product, technology and go-to-market, for the long term.",
+    premiumFeatures: [
+      "Ongoing, hands-on involvement",
+      "Access across media, technology and product disciplines",
+      "Long-term capital, not a quick exit",
+      "A seat at the table, not just a vendor relationship",
+    ],
+    bestValue: "Long-Term",
+    getStarted: "GET STARTED",
   },
 
   contactHero: {

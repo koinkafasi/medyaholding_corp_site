@@ -7,7 +7,7 @@ import Typography from "@/src/component/Typography";
 import { getDictionary } from "@/lib/content";
 import type { Locale } from "@/lib/content/types";
 
-import CaseStudyImg from '@/src/assets/images/CaseStudy.png'
+import CaseStudyImg from '@/src/assets/images/generated/sector-venture.png'
 
 export default function CaseStudy() {
     const dict = getDictionary(useLocale() as Locale);

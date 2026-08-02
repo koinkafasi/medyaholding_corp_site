@@ -120,9 +120,9 @@ export const tr: Dictionary = {
   },
 
   latestProject: {
-    label: "Son Projeler",
-    title: ["Yaratıcılığı Sergiliyor,", "Yeni Olasılıklara İlham Veriyoruz"],
-    cta: "TÜM PORTFÖYÜ GÖR",
+    label: "Faaliyet Alanlarımız",
+    title: ["Beş Disiplin,", "Tek Bir Holding"],
+    cta: "TÜM SEKTÖRLERİ GÖR",
   },
 
   homeServices: {
@@ -173,8 +173,8 @@ export const tr: Dictionary = {
   },
 
   portfolioHero: {
-    title: "Kurduğumuz ve Desteklediğimiz Şirketler",
-    subtitle: "Holding genelindeki medya, teknoloji ve ürün çalışmalarından bir seçki.",
+    title: "Şirketleri Nasıl İnşa Eder ve Destekleriz",
+    subtitle: "Holding içindeki her şirketin arkasındaki aynı disiplin — ister sıfırdan inşa ediyor, ister zaten hareket halindeki bir ekibi destekliyor olalım.",
   },
 
   caseStudy: {
@@ -195,40 +195,41 @@ export const tr: Dictionary = {
   },
 
   benefits: {
-    label: "Avantajlar",
-    title: ["Premium Plana Geçmenin", "Avantajları"],
-    subtitle: "Öngörülebilir sabit bir ücretle premium tasarım yeteneğine ulaşın — iş ihtiyaçlarınızı karşılayacak çok yönlü tasarım çözümleri. Planınızı şimdi seçin!",
+    label: "Neden Bizimle Çalışmalısınız",
+    title: ["Holding'le Çalışırken", "Elde Ettikleriniz"],
+    subtitle: "Hangi çalışma modeli uygun olursa olsun, dokunduğumuz her şirkette aynı operasyon standardı geçerli.",
     items: [
-      { title: "Gelişmiş Özellikler & Araçlar", desc: "Verimliliği ve performansı artırmak için özel özellikleri, otomasyonu ve premium araçları kullanıma açın." },
-      { title: "Öncelikli Destek & Yardım", desc: "Verimliliği ve performansı artırmak için özel özellikleri, otomasyonu ve premium araçları kullanıma açın." },
-      { title: "Daha Yüksek Limitler & Özelleştirme", desc: "Verimliliği ve performansı artırmak için özel özellikleri, otomasyonu ve premium araçları kullanıma açın." },
-      { title: "Daha İyi Performans & İçgörüler", desc: "Verimliliği ve performansı artırmak için özel özellikleri, otomasyonu ve premium araçları kullanıma açın." },
-      { title: "Güncellemelere Özel Erişim", desc: "Verimliliği ve performansı artırmak için özel özellikleri, otomasyonu ve premium araçları kullanıma açın." },
-      { title: "Gelişmiş Güvenlik & Güvenilirlik", desc: "Verimliliği ve performansı artırmak için özel özellikleri, otomasyonu ve premium araçları kullanıma açın." },
+      { title: "Doğrudan Erişim", desc: "Bir müşteri temsilcisi katmanıyla değil, işi gerçekten yapan kişilerle çalışırsınız." },
+      { title: "Gerçek Operasyonel Deneyim", desc: "Medya, teknoloji ve ürün disiplinleri tek çatı altında — parça parça dışarıdan alınmış değil." },
+      { title: "Şeffaf Şartlar", desc: "Baştan üzerinde anlaşılmış net kapsamlar — gizli ücret yok, aldığınızı değiştiren küçük yazılar yok." },
+      { title: "Uzun Vadeli Düşünce", desc: "Sadece bir sonraki kilometre taşı için değil, birkaç yıl sonra da önemli olacak şeyler için inşa ediyoruz." },
+      { title: "Kanıtlanmış Disiplin", desc: "Portföydeki her şirketin arkasındaki aynı süreç, sizin çalışmanıza da uygulanır." },
+      { title: "Gerçek Bir Ortak", desc: "Gerektiğinde uygulamalı katılım — sadece bir tedarikçi ilişkisi değil." },
     ],
   },
 
   pricingSection: {
-    label: "Fiyatlandırma",
-    title: "Bugün Yükseltin – Daha Fazla Özellik, Daha Fazla Güç, Daha Fazla Büyüme!",
-    subtitle: "Büyümenize yatırım yapmak hiç bu kadar kolay olmamıştı. Esnek fiyatlandırma planlarımızı keşfedin ve bir olasılıklar dünyasının kilidini açın.",
-    toggleMonthly: "Aylık",
-    toggleAnnually: "Yıllık",
-    standardPlan: "Standart Plan",
-    premiumPlan: "Premium Plan",
-    planDesc: "Çevrimiçi varlığını oluşturmak isteyen bireyler ve küçük işletmeler için mükemmel.",
-    perMonth: "/Ay",
-    bestValue: "En İyi Değer!",
-    getStarted: "BAŞLAYIN",
-    features: [
-      "Tüm Özelliklere Tam Erişim",
-      "Daha Yüksek Limitler & Ölçeklenebilirlik",
-      "Öncelikli Müşteri Desteği",
-      "Gelişmiş Analitik & İçgörüler",
-      "Sorunsuz Entegrasyonlar",
-      "Yeni Özelliklere Özel Erken Erişim",
-      "Gelişmiş Güvenlik & Güvenilirlik",
+    label: "Çalışma Modelleri",
+    title: "Bizimle Çalışmanın İki Yolu",
+    subtitle: "Doğru yapı, ne inşa ettiğinize ve bizden ne kadar dahil olmamızı beklediğinize bağlı.",
+    standardPlan: "Danışmanlık Ortaklığı",
+    standardDesc: "Tam bir operasyonel taahhüt olmadan, belirli bir konuda — ürün, teknoloji veya marka — odaklı uzmanlığa ihtiyaç duyan ekipler için.",
+    standardFeatures: [
+      "Tanımlı kapsam ve zaman çizelgesi",
+      "İşi yapan ekibe doğrudan erişim",
+      "Baştan üzerinde anlaşılmış net teslimatlar",
+      "Uzun vadeli taahhüt gerekmez",
     ],
+    premiumPlan: "Operasyonel Ortaklık",
+    premiumDesc: "Doğrudan inşa ettiğimiz veya desteklediğimiz şirketler için — ürün, teknoloji ve büyümede uzun vadeli, uygulamalı katılım.",
+    premiumFeatures: [
+      "Sürekli, uygulamalı katılım",
+      "Medya, teknoloji ve ürün disiplinlerine erişim",
+      "Hızlı çıkış değil, uzun vadeli sermaye",
+      "Sadece bir tedarikçi değil, masada bir yer",
+    ],
+    bestValue: "Uzun Vadeli",
+    getStarted: "BAŞLAYIN",
   },
 
   contactHero: {
