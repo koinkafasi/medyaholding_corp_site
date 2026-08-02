@@ -24,7 +24,7 @@ export const tr: Dictionary = {
 
   sectionNav: {
     hero: "Giriş",
-    about: "Hakkımızda",
+    philosophy: "Felsefemiz",
     partners: "İş Ortakları",
     value: "Değer Önerisi",
     stack: "Portföy",
@@ -48,10 +48,17 @@ export const tr: Dictionary = {
   homeHero: {
     badge: "Medya · Teknoloji · Ürün",
     title: ["Medya, Teknoloji ve", "Zanaat Üzerine", "Kurulmuş Bir Holding"],
+    titleHighlight: "Medya, Teknoloji",
     subtitle: "Medya Holding; medya, teknoloji ve dijital ürün şirketlerinde faaliyet gösteriyor ve yatırım yapıyor — kampanya değil, kalıcı markalar inşa ediyoruz.",
     cta: "İLETİŞİME GEÇ",
     scrollDown: "AŞAĞI KAYDIR",
     seeWork: "ÇALIŞMALARIMIZI GÖR",
+  },
+
+  homeManifesto: {
+    label: "Felsefemiz",
+    statement: "Hızlı çıkışların değil, kalıcı şirketlerin peşindeyiz.",
+    subtitle: "Her yatırım bizim için bir ortaklıktır. Kurduğumuz şirketlerin içinde kalır, onlarla birlikte büyürüz — pasif bir hissedar olarak değil.",
   },
 
   valueProp: {

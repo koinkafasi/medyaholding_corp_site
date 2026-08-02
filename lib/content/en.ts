@@ -24,7 +24,7 @@ export const en: Dictionary = {
 
   sectionNav: {
     hero: "Intro",
-    about: "About",
+    philosophy: "Philosophy",
     partners: "Partners",
     value: "Value",
     stack: "Portfolio",
@@ -47,11 +47,18 @@ export const en: Dictionary = {
 
   homeHero: {
     badge: "Media · Technology · Product",
-    title: ["A Holding Built", "Around Media,", "Technology and Craft"],
+    title: ["A Holding Built Around", "Media, Technology", "and Craft"],
+    titleHighlight: "Media, Technology",
     subtitle: "Medya Holding operates and invests in media, technology and digital product companies — building durable brands, not campaigns.",
     cta: "GET IN TOUCH",
     scrollDown: "SCROLL DOWN",
     seeWork: "SEE OUR WORK",
+  },
+
+  homeManifesto: {
+    label: "Our Philosophy",
+    statement: "We're not chasing quick exits. We're building companies built to last.",
+    subtitle: "Every investment is a partnership to us. We stay inside the companies we build and grow alongside them — not as a passive shareholder.",
   },
 
   valueProp: {

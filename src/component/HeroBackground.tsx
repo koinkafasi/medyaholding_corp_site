@@ -10,7 +10,7 @@ interface Props {
 export default function HeroBackground(props: Props) {
     const { children, component, videoSrc } = props
     return (
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden min-h-screen flex flex-col">
             <div className="absolute inset-0 w-full h-full -z-20 bg-[#050810]">
                 {videoSrc ? (
                     <video
@@ -32,7 +32,7 @@ export default function HeroBackground(props: Props) {
                 )}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/40 via-[#050810]/70 to-[#050810]" />
             </div>
-            <div className="px-[20px] pb-[48px] pt-[118px] md:px-[72px] md:pb-[80px] lg:pt-[192px]">
+            <div className="flex-1 flex flex-col justify-between px-[20px] pb-[48px] pt-[118px] md:px-[72px] md:pb-[80px] lg:pt-[192px]">
                 {children}
             </div>
             {component}

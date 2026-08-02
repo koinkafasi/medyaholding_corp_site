@@ -8,7 +8,7 @@ import { useRef } from "react";
 import { useLocale } from "next-intl";
 
 import Hero from "@/src/page-section/home/Hero";
-import AboutUs from "@/src/page-section/about/AboutUs";
+import Manifesto from "@/src/page-section/home/Manifesto";
 import LogoPartners from "@/src/page-section/home/LogoPartners";
 import PartnerInvite from "@/src/page-section/home/PartnerInvite";
 import ValueProposition from "@/src/page-section/home/ValueProposition";
@@ -29,7 +29,7 @@ export default function Home() {
   const dict = getDictionary(useLocale() as Locale);
 
   const heroRef = useRef<HTMLDivElement | null>(null);
-  const aboutRef = useRef<HTMLDivElement | null>(null);
+  const manifestoRef = useRef<HTMLDivElement | null>(null);
   const partnersRef = useRef<HTMLDivElement | null>(null);
   const valueRef = useRef<HTMLDivElement | null>(null);
   const stackRef = useRef<HTMLDivElement | null>(null);
@@ -38,10 +38,10 @@ export default function Home() {
   const ctaRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToNextSection = () => {
-    if (aboutRef.current) {
+    if (manifestoRef.current) {
       gsap.to(window, {
         duration: 1.2,
-        scrollTo: { y: aboutRef.current, offsetY: 50 },
+        scrollTo: { y: manifestoRef.current, offsetY: 0 },
         ease: "power2.inOut",
       });
     }
@@ -49,7 +49,7 @@ export default function Home() {
 
   const sections = [
     { id: "hero", label: dict.sectionNav.hero, ref: heroRef },
-    { id: "about", label: dict.sectionNav.about, ref: aboutRef },
+    { id: "manifesto", label: dict.sectionNav.philosophy, ref: manifestoRef },
     { id: "partners", label: dict.sectionNav.partners, ref: partnersRef },
     { id: "value", label: dict.sectionNav.value, ref: valueRef },
     { id: "stack", label: dict.sectionNav.stack, ref: stackRef },
@@ -61,29 +61,29 @@ export default function Home() {
   return (
     <div className="">
       <SectionDotNav sections={sections} />
-      <div ref={heroRef}>
+      <div ref={heroRef} className="snap-section">
         <Hero onScrollToTestimonials={scrollToNextSection} />
       </div>
-      <div ref={aboutRef}>
-        <AboutUs />
+      <div ref={manifestoRef} className="snap-section">
+        <Manifesto />
       </div>
-      <div ref={partnersRef}>
+      <div ref={partnersRef} className="snap-section">
         <LogoPartners />
         <PartnerInvite />
       </div>
-      <div ref={valueRef}>
+      <div ref={valueRef} className="snap-section">
         <ValueProposition />
       </div>
-      <div ref={stackRef}>
+      <div ref={stackRef} className="snap-section">
         <StackShowcase />
       </div>
-      <div ref={focusRef}>
+      <div ref={focusRef} className="snap-section">
         <FocusAreas />
       </div>
-      <div ref={servicesRef}>
+      <div ref={servicesRef} className="snap-section">
         <Services />
       </div>
-      <div ref={ctaRef}>
+      <div ref={ctaRef} className="snap-section">
         <CtaGrid />
       </div>
     </div>

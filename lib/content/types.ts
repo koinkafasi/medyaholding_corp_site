@@ -31,7 +31,7 @@ export interface Dictionary {
 
   sectionNav: {
     hero: string;
-    about: string;
+    philosophy: string;
     partners: string;
     value: string;
     stack: string;
@@ -52,7 +52,13 @@ export interface Dictionary {
     copyright: string;
   };
 
-  homeHero: { badge: string; title: string[]; subtitle: string; cta: string; scrollDown: string; seeWork: string };
+  homeHero: { badge: string; title: string[]; titleHighlight: string; subtitle: string; cta: string; scrollDown: string; seeWork: string };
+
+  homeManifesto: {
+    label: string;
+    statement: string;
+    subtitle: string;
+  };
 
   valueProp: {
     eyebrow: string;

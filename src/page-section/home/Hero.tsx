@@ -40,12 +40,24 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
             letterSpacingMobile={-1.2}
             noDarkMode
           >
-            {dict.homeHero.title.map((line, i) => (
-              <span key={i}>
-                {line}
-                {i < dict.homeHero.title.length - 1 && <br />}
-              </span>
-            ))}
+            {dict.homeHero.title.map((line, i) => {
+              const highlight = dict.homeHero.titleHighlight;
+              const idx = highlight ? line.indexOf(highlight) : -1;
+              return (
+                <span key={i}>
+                  {idx === -1 ? (
+                    line
+                  ) : (
+                    <>
+                      {line.slice(0, idx)}
+                      <span className="gradient-text-shift">{highlight}</span>
+                      {line.slice(idx + highlight.length)}
+                    </>
+                  )}
+                  {i < dict.homeHero.title.length - 1 && <br />}
+                </span>
+              );
+            })}
           </Typography>
 
           <Typography
@@ -76,7 +88,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
       <div className="flex justify-start items-stretch self-stretch mt-[48px] lg:mt-[22px]">
         {/* Scroll Down */}
         <div
-          className="flex justify-between items-center gap-[8px] text-[#070707] dark:text-white cursor-pointer"
+          className="flex justify-between items-center gap-[8px] text-white cursor-pointer"
           onClick={onScrollToTestimonials}
         >
           {dict.homeHero.scrollDown} <Icons name="arrowDown" className="w-5" />
