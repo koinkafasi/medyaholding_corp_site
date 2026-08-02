@@ -3,7 +3,6 @@
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import HeroBackground from "@/src/component/HeroBackground";
-import CornerRibbon from "@/src/component/CornerRibbon";
 import Typography from "@/src/component/Typography";
 import Button from "@/src/component/Button";
 import Tag from "@/src/component/Tag";
@@ -19,7 +18,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
   const dict = getDictionary(useLocale() as Locale);
 
   return (
-    <HeroBackground component={<CornerRibbon />} videoSrc="/videos/hero-bg.mp4">
+    <HeroBackground videoSrc="/videos/hero-bg.mp4">
       <div className="flex flex-col lg:flex-row justify-between items-start self-stretch gap-[8px]">
         {/* Text Section */}
         <div className="w-full lg:w-[75%]">
