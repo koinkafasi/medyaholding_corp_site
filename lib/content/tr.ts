@@ -159,6 +159,12 @@ export const tr: Dictionary = {
     ],
   },
 
+  corporateVideo: {
+    label: "Kurumsal Video",
+    title: "Medya Holding'i Yakından Tanıyın",
+    subtitle: "Değerlerimizi, çalışma kültürümüzü ve portföy şirketlerimizle olan yaklaşımımızı anlatan kısa bir bakış.",
+  },
+
   servicesHero: {
     title: "Holdingin İnşa Ettiği ve Yönettiği Şeyler",
     subtitle: "Marka ve üründen, altındaki teknolojiye kadar — portföydeki her şirkete kazandırdığımız disiplinler.",

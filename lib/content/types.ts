@@ -93,6 +93,12 @@ export interface Dictionary {
     items: FeatureItem[];
   };
 
+  corporateVideo: {
+    label: string;
+    title: string;
+    subtitle: string;
+  };
+
   servicesHero: { title: string; subtitle: string };
 
   ourServices: {
