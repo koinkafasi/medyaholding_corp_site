@@ -38,7 +38,7 @@ export default function Services() {
 
             card.addEventListener("mouseenter", () => {
                 gsap.to(card, {
-                    backgroundColor: theme === "light" ? "#1D1D1D" : "#393939",
+                    backgroundColor: theme === "light" ? "rgba(17,70,242,0.06)" : "rgba(17,70,242,0.1)",
                     padding: "24px 32px",
                     borderRadius: "12px",
                     duration: 0.5,
@@ -78,24 +78,24 @@ export default function Services() {
     }, []);
     return (
         <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[8px] md:px-[12px] w-full">
-            <div className="bg-[#070707] dark:bg-[#1D1D1D] rounded-[20px] py-[64px] px-[16px] md:p-[60px]">
+            <div className="bg-[#EEE] dark:bg-[#1D1D1D] rounded-[20px] py-[64px] px-[16px] md:p-[60px]">
                 <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end self-stretch gap-[16px]">
                     <div className="flex flex-col items-start gap-[24px]">
-                        <Tag color="#fff">{dict.homeServices.label}</Tag>
-                        <Typography as="div" color="#fff" noDarkMode size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6}>
+                        <Tag>{dict.homeServices.label}</Tag>
+                        <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6}>
                             {dict.homeServices.title[0]} <br />
                             {dict.homeServices.title[1]}
                         </Typography>
                     </div>
                     <div className="flex flex-col items-start gap-[48px] lg:gap-[14px] w-full lg:w-[35%]">
-                        <Typography size={14} noDarkMode color="#fff">
+                        <Typography size={14}>
                             {dict.homeServices.subtitle}
                         </Typography>
                         <div className="flex gap-[8px] cursor-pointer">
                             <Link href="/services">
-                                <Typography size={16} weight={500} noDarkMode color="#fff">{dict.homeServices.cta}</Typography>
+                                <Typography size={16} weight={500} className="text-[#1146F2]">{dict.homeServices.cta}</Typography>
                             </Link>
-                            <Icons name="arrowRight" className="w-5" color="#fff" />
+                            <Icons name="arrowRight" className="w-5" color="#1146F2" />
                         </div>
                     </div>
                 </div>
@@ -115,8 +115,6 @@ export default function Services() {
                                 sizeMobile={28}
                                 weight={600}
                                 lineHeight={40}
-                                noDarkMode
-                                color="#fff"
                                 className="w-full lg:w-[25%]"
                             >
                                 {service.title}
@@ -126,9 +124,7 @@ export default function Services() {
                                 as="div"
                                 size={14}
                                 lineHeight={20}
-                                noDarkMode
-                                color="#fff"
-                                className="w-full order-2 lg:w-[30%] lg:order-3"
+                                className="w-full order-2 lg:w-[30%] lg:order-3 opacity-70"
                             >
                                 {service.desc}
                             </Typography>

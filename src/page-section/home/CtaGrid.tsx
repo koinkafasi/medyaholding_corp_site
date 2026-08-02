@@ -28,8 +28,8 @@ export default function CtaGrid() {
                             </Typography>
                         </div>
                         <div className="flex items-center gap-[8px]">
-                            <Typography size={14} weight={600}>{item.ctaLabel}</Typography>
-                            <Icons name="arrowUpRight" className="w-4 group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-transform duration-300" />
+                            <Typography size={14} weight={600} className="text-[#1146F2]">{item.ctaLabel}</Typography>
+                            <Icons name="arrowUpRight" className="w-4 group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-transform duration-300" color="#1146F2" />
                         </div>
                     </Link>
                 ))}

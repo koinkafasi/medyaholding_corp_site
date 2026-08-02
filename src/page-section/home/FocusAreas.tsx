@@ -55,9 +55,9 @@ export default function FocusAreas() {
                                 ))}
                             </ul>
                         </div>
-                        <Link href={card.href} className="flex items-center gap-[8px] cursor-pointer">
-                            <Typography size={14} weight={600}>{card.ctaLabel}</Typography>
-                            <Icons name="arrowUpRight" className="w-4" />
+                        <Link href={card.href} className="group/link flex items-center gap-[8px] cursor-pointer">
+                            <Typography size={14} weight={600} className="text-[#1146F2]">{card.ctaLabel}</Typography>
+                            <Icons name="arrowUpRight" className="w-4 group-hover/link:translate-x-[2px] group-hover/link:-translate-y-[2px] transition-transform duration-300" color="#1146F2" />
                         </Link>
                     </div>
                 ))}
