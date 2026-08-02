@@ -56,12 +56,12 @@ export default function AboutUs() {
 
 
     return (
-        <div className="bg-white dark:bg-[#070707] w-full px-[20px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col md:flex-row justify-between items-start gap-[24px]">
-            <div className="flex flex-col items-start gap-[24px] w-full md:w-[220px] shrink-0">
+        <div className="bg-white dark:bg-[#070707] w-full px-[20px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col md:flex-row justify-between items-stretch gap-[24px]">
+            <div className="flex flex-col items-start gap-[24px] w-full md:w-[280px] shrink-0">
                 <Tag>
                     <Typography size={14} sizeMobile={12} weight={500}>{dict.nav.about}</Typography>
                 </Tag>
-                <div className="relative w-full aspect-video rounded-[12px] overflow-hidden bg-[#EEE] dark:bg-[#1D1D1D]">
+                <div className="relative w-full flex-1 min-h-[220px] rounded-[12px] overflow-hidden bg-[#EEE] dark:bg-[#1D1D1D]">
                     <video
                         className="absolute inset-0 w-full h-full object-cover"
                         src="/videos/corporate.mp4"

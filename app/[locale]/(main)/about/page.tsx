@@ -6,7 +6,6 @@ import React, { Suspense } from "react";
 
 const Hero = React.lazy(() => import("@/src/page-section/about/Hero"));
 const AboutUs = React.lazy(() => import("@/src/page-section/about/AboutUs"));
-const CorporateVideo = React.lazy(() => import("@/src/page-section/about/CorporateVideo"));
 const Approach = React.lazy(() => import('@/src/page-section/about/Approach'));
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,7 +18,6 @@ export default function About() {
             <Suspense>
                 <Hero />
                 <AboutUs />
-                <CorporateVideo />
                 <Approach />
             </Suspense>
         </div>

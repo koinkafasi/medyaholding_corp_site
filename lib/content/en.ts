@@ -159,11 +159,6 @@ export const en: Dictionary = {
     ],
   },
 
-  corporateVideo: {
-    label: "Corporate Video",
-    title: "Get to Know Medya Holding",
-    subtitle: "A short look at our values, our working culture, and how we work with the companies in our portfolio.",
-  },
 
   servicesHero: {
     title: "What the Holding Builds and Operates",
