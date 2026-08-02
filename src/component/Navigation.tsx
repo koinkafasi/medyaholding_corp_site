@@ -29,7 +29,7 @@ export default function Navigation() {
           <Link
             key={index}
             href={item.path}
-            className="group relative block h-[20px] overflow-hidden cursor-pointer text-[16px]"
+            className="group relative block h-[24px] overflow-hidden cursor-pointer text-[16px]"
           >
             <span
               className={clsx(
