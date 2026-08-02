@@ -36,7 +36,29 @@ export interface Dictionary {
     copyright: string;
   };
 
-  homeHero: { title: string[]; subtitle: string; cta: string; scrollDown: string; seeWork: string };
+  homeHero: { badge: string; title: string[]; subtitle: string; cta: string; scrollDown: string; seeWork: string };
+
+  valueProp: {
+    eyebrow: string;
+    title: string;
+    items: FeatureItem[];
+  };
+
+  stackShowcase: {
+    eyebrow: string;
+    title: string[];
+    items: FeatureItem[];
+  };
+
+  focusAreas: {
+    eyebrow: string;
+    title: string[];
+    cards: { title: string; bullets: string[]; ctaLabel: string; href: string }[];
+  };
+
+  ctaGrid: {
+    items: { title: string; desc: string; ctaLabel: string; href: string }[];
+  };
 
   aboutUs: {
     description: string;

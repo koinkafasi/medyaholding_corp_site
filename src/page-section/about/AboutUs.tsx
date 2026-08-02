@@ -2,7 +2,6 @@
 
 import { useRef, useEffect } from "react";
 import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLocale } from "next-intl";
 import { useTheme } from "@/src/context/ThemeProvider";
 
@@ -30,11 +29,9 @@ export default function AboutUs() {
 
         const chars = descAboutUsRef.current.querySelectorAll("span")
 
-        ScrollTrigger.getAll().forEach(t => t.kill())
-
         gsap.set(chars, { opacity: 1, color: "#8D8D8D" })
 
-        gsap.to(chars, {
+        const tween = gsap.to(chars, {
             opacity: 1,
             color: theme === "light" ? "#070707" : "#fff",
             stagger: 0.05,
@@ -46,7 +43,13 @@ export default function AboutUs() {
             },
         })
 
-        ScrollTrigger.refresh()
+        // Kill only this component's own trigger/tween on cleanup -- never
+        // ScrollTrigger.getAll(), which would tear down every other
+        // section's scroll-triggered reveal on the page too.
+        return () => {
+            tween.scrollTrigger?.kill()
+            tween.kill()
+        }
 
     }, [theme, descAboutUs])
 

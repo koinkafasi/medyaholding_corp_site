@@ -30,11 +30,74 @@ export const en: Dictionary = {
   },
 
   homeHero: {
+    badge: "Media · Technology · Product",
     title: ["A Holding Built", "Around Media,", "Technology and Craft"],
     subtitle: "Medya Holding operates and invests in media, technology and digital product companies — building durable brands, not campaigns.",
     cta: "GET IN TOUCH",
     scrollDown: "SCROLL DOWN",
     seeWork: "SEE OUR WORK",
+  },
+
+  valueProp: {
+    eyebrow: "How we operate",
+    title: "A holding built on operating discipline",
+    items: [
+      { title: "Operating Discipline", desc: "Decisions backed by data, not guesswork — every company in the portfolio is run, not just funded." },
+      { title: "Long-Term Capital", desc: "Built to compound, not to exit early. We back companies for the years it takes to build something durable." },
+      { title: "Focused Portfolio", desc: "Fewer bets, held with real conviction — close involvement over a passive stake in many things." },
+    ],
+  },
+
+  stackShowcase: {
+    eyebrow: "What the holding is built from",
+    title: ["The disciplines behind", "every company we build"],
+    items: [
+      { title: "Media", desc: "Editorial and brand work built to hold up over years, not a single campaign." },
+      { title: "Technology", desc: "Full-stack product development, from a first prototype to infrastructure that scales." },
+      { title: "Product", desc: "Translating ambiguous goals into products people actually want to use." },
+      { title: "Brand", desc: "Identity and positioning work that gives a company a voice worth remembering." },
+      { title: "Venture Building", desc: "Building companies from the ground up alongside the founders and teams inside them." },
+    ],
+  },
+
+  focusAreas: {
+    eyebrow: "Who we build with",
+    title: ["Built for the people", "inside the companies we run"],
+    cards: [
+      {
+        title: "Media Companies",
+        bullets: ["Editorial strategy and content operations", "Brand and audience growth", "Distribution across channels"],
+        ctaLabel: "See our work",
+        href: "/portofolio",
+      },
+      {
+        title: "Technology Teams",
+        bullets: ["Full-stack product engineering", "Cloud infrastructure and scaling", "Long-term technical ownership"],
+        ctaLabel: "Our services",
+        href: "/services",
+      },
+      {
+        title: "Product Studios",
+        bullets: ["Product architecture and design", "From prototype to production", "Design systems built to last"],
+        ctaLabel: "Our services",
+        href: "/services",
+      },
+      {
+        title: "Founders & Operators",
+        bullets: ["Long-term capital, not a quick exit", "Hands-on operating support", "A partner, not just a check"],
+        ctaLabel: "About us",
+        href: "/about",
+      },
+    ],
+  },
+
+  ctaGrid: {
+    items: [
+      { title: "Get in Touch", desc: "Tell us what you are building.", ctaLabel: "Contact us", href: "/contact" },
+      { title: "See Our Work", desc: "A selection of the portfolio.", ctaLabel: "View portfolio", href: "/portofolio" },
+      { title: "Our Services", desc: "What the holding builds and operates.", ctaLabel: "See services", href: "/services" },
+      { title: "About Us", desc: "How we think about building.", ctaLabel: "Read more", href: "/about" },
+    ],
   },
 
   aboutUs: {

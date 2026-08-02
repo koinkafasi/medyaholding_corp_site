@@ -4,15 +4,19 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
 import { useGSAP } from '@gsap/react';
-import React, { useRef, Suspense } from "react";
+import { useRef } from "react";
 
-const Hero = React.lazy(() => import("@/src/page-section/home/Hero"));
-const AboutUs = React.lazy(() => import("@/src/page-section/about/AboutUs"));
-const LatestProject = React.lazy(() => import("@/src/page-section/home/LatestProject"));
-const LogoPartners = React.lazy(() => import("@/src/page-section/home/LogoPartners"));
-const Services = React.lazy(() => import("@/src/page-section/home/Services"));
-const Pricing = React.lazy(() => import("@/src/page-section/PricingSection"));
-const Faq = React.lazy(() => import("@/src/page-section/Faq"));
+import Hero from "@/src/page-section/home/Hero";
+import AboutUs from "@/src/page-section/about/AboutUs";
+import LogoPartners from "@/src/page-section/home/LogoPartners";
+import ValueProposition from "@/src/page-section/home/ValueProposition";
+import StackShowcase from "@/src/page-section/home/StackShowcase";
+import FocusAreas from "@/src/page-section/home/FocusAreas";
+import Services from "@/src/page-section/home/Services";
+import LatestProject from "@/src/page-section/home/LatestProject";
+import CtaGrid from "@/src/page-section/home/CtaGrid";
+import Pricing from "@/src/page-section/PricingSection";
+import Faq from "@/src/page-section/Faq";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -34,17 +38,19 @@ export default function Home() {
 
   return (
     <div className="">
-      <Suspense>
-        <Hero onScrollToTestimonials={scrollToNextSection} />
-        <div ref={nextSectionRef}>
-          <AboutUs />
-        </div>
-        <LatestProject />
-        <LogoPartners />
-        <Services />
-        <Pricing />
-        <Faq />
-      </Suspense>
+      <Hero onScrollToTestimonials={scrollToNextSection} />
+      <div ref={nextSectionRef}>
+        <AboutUs />
+      </div>
+      <LogoPartners />
+      <ValueProposition />
+      <StackShowcase />
+      <FocusAreas />
+      <Services />
+      <LatestProject />
+      <CtaGrid />
+      <Pricing />
+      <Faq />
     </div>
   )
 }

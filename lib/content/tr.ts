@@ -30,11 +30,74 @@ export const tr: Dictionary = {
   },
 
   homeHero: {
+    badge: "Medya · Teknoloji · Ürün",
     title: ["Medya, Teknoloji ve", "Zanaat Üzerine", "Kurulmuş Bir Holding"],
     subtitle: "Medya Holding; medya, teknoloji ve dijital ürün şirketlerinde faaliyet gösteriyor ve yatırım yapıyor — kampanya değil, kalıcı markalar inşa ediyoruz.",
     cta: "İLETİŞİME GEÇ",
     scrollDown: "AŞAĞI KAYDIR",
     seeWork: "ÇALIŞMALARIMIZI GÖR",
+  },
+
+  valueProp: {
+    eyebrow: "Nasıl çalışıyoruz",
+    title: "Operasyonel disiplin üzerine kurulmuş bir holding",
+    items: [
+      { title: "Operasyonel Disiplin", desc: "Kararlar tahmine değil veriye dayanır — portföydeki her şirket sadece fonlanmaz, gerçekten yönetilir." },
+      { title: "Uzun Vadeli Sermaye", desc: "Erken çıkış için değil, büyümek için inşa edilir. Kalıcı bir şey inşa etmenin gerektirdiği kadar süre destekleriz." },
+      { title: "Odaklı Portföy", desc: "Daha az bahis, gerçek bir inançla tutulur — çok şeyde pasif bir pay yerine az sayıda şeyde yakın ilgi." },
+    ],
+  },
+
+  stackShowcase: {
+    eyebrow: "Holding neyin üzerine kurulu",
+    title: ["İnşa ettiğimiz her şirketin", "arkasındaki disiplinler"],
+    items: [
+      { title: "Medya", desc: "Tek bir kampanya için değil, yıllar boyu sağlam kalacak editoryal ve marka işi." },
+      { title: "Teknoloji", desc: "İlk prototipten ölçeklenen altyapıya, uçtan uca ürün geliştirme." },
+      { title: "Ürün", desc: "Belirsiz hedefleri, insanların gerçekten kullanmak istediği ürünlere dönüştürmek." },
+      { title: "Marka", desc: "Bir şirkete akılda kalıcı bir ses kazandıran kimlik ve konumlandırma işi." },
+      { title: "Venture Building", desc: "İçindeki kurucu ve ekiplerle birlikte, şirketleri sıfırdan inşa etmek." },
+    ],
+  },
+
+  focusAreas: {
+    eyebrow: "Kimlerle çalışıyoruz",
+    title: ["Yönettiğimiz şirketlerin", "içindeki insanlar için"],
+    cards: [
+      {
+        title: "Medya Şirketleri",
+        bullets: ["Editoryal strateji ve içerik operasyonları", "Marka ve kitle büyümesi", "Kanallar arası dağıtım"],
+        ctaLabel: "Çalışmalarımızı gör",
+        href: "/portofolio",
+      },
+      {
+        title: "Teknoloji Ekipleri",
+        bullets: ["Uçtan uca ürün mühendisliği", "Bulut altyapısı ve ölçeklendirme", "Uzun vadeli teknik sahiplik"],
+        ctaLabel: "Hizmetlerimiz",
+        href: "/services",
+      },
+      {
+        title: "Ürün Stüdyoları",
+        bullets: ["Ürün mimarisi ve tasarımı", "Prototipten üretime", "Kalıcı tasarım sistemleri"],
+        ctaLabel: "Hizmetlerimiz",
+        href: "/services",
+      },
+      {
+        title: "Kurucular & Operatörler",
+        bullets: ["Hızlı çıkış değil, uzun vadeli sermaye", "Uygulamalı operasyonel destek", "Sadece çek değil, bir ortak"],
+        ctaLabel: "Hakkımızda",
+        href: "/about",
+      },
+    ],
+  },
+
+  ctaGrid: {
+    items: [
+      { title: "İletişime Geçin", desc: "Ne inşa ettiğinizi bize anlatın.", ctaLabel: "İletişim", href: "/contact" },
+      { title: "Çalışmalarımızı Görün", desc: "Portföyden bir seçki.", ctaLabel: "Portföyü gör", href: "/portofolio" },
+      { title: "Hizmetlerimiz", desc: "Holding'in inşa ettiği ve yönettiği alanlar.", ctaLabel: "Hizmetleri gör", href: "/services" },
+      { title: "Hakkımızda", desc: "İnşa etmeyi nasıl düşünüyoruz.", ctaLabel: "Devamını oku", href: "/about" },
+    ],
   },
 
   aboutUs: {

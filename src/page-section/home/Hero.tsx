@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import HeroBackground from "@/src/component/HeroBackground";
 import Typography from "@/src/component/Typography";
 import Button from "@/src/component/Button";
+import Tag from "@/src/component/Tag";
 import Icons from "@/src/component/Icons";
 import { getDictionary } from "@/lib/content";
 import type { Locale } from "@/lib/content/types";
@@ -21,6 +22,10 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
       <div className="flex flex-col lg:flex-row justify-between items-start self-stretch gap-[8px]">
         {/* Text Section */}
         <div className="w-full lg:w-[75%]">
+          <Tag color="#fff" className="mb-[24px] border-white/30">
+            {dict.homeHero.badge}
+          </Tag>
+
           <Typography
             as="div"
             color="#fff"
@@ -52,16 +57,23 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
             {dict.homeHero.subtitle}
           </Typography>
 
-          <Link href="/contact">
-            <Button variant="primary" className="mt-[32px]">
-              {dict.homeHero.cta}
-            </Button>
-          </Link>
+          <div className="flex flex-wrap items-center gap-[16px] mt-[32px]">
+            <Link href="/contact">
+              <Button variant="primary">
+                {dict.homeHero.cta}
+              </Button>
+            </Link>
+            <Link href="/portofolio">
+              <Button variant="secondary">
+                {dict.homeHero.seeWork}
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* Bottom Section */}
-      <div className="flex justify-between items-stretch lg:items-end self-stretch mt-[48px] lg:mt-[22px]">
+      <div className="flex justify-start items-stretch self-stretch mt-[48px] lg:mt-[22px]">
         {/* Scroll Down */}
         <div
           className="flex justify-between items-center gap-[8px] text-[#070707] dark:text-white cursor-pointer"
@@ -69,13 +81,6 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
         >
           {dict.homeHero.scrollDown} <Icons name="arrowDown" className="w-5" />
         </div>
-
-        {/* Link to Portfolio */}
-        <Link href="/portofolio">
-          <div className="flex justify-between items-center gap-[8px] text-[#070707] text-[14px] dark:text-[#fff] cursor-pointer">
-            {dict.homeHero.seeWork} <Icons name="arrowUpRight" className="w-5" />
-          </div>
-        </Link>
       </div>
     </HeroBackground>
   );
