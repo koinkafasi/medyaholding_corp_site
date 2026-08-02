@@ -115,6 +115,9 @@ export const en: Dictionary = {
   },
 
   ctaGrid: {
+    label: "Next Step",
+    title: "What Should We Build Together?",
+    subtitle: "Whether you want to partner with us, explore our portfolio, or join the team — this is the fastest way to start.",
     items: [
       { title: "Get in Touch", desc: "Tell us what you are building.", ctaLabel: "Contact us", href: "/contact" },
       { title: "See Our Work", desc: "A selection of the portfolio.", ctaLabel: "View portfolio", href: "/portofolio" },

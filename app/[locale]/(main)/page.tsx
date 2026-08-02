@@ -17,6 +17,8 @@ import FocusAreas from "@/src/page-section/home/FocusAreas";
 import Services from "@/src/page-section/home/Services";
 import CtaGrid from "@/src/page-section/home/CtaGrid";
 import SectionDotNav from "@/src/component/SectionDotNav";
+import SectionBackdrop from "@/src/component/SectionBackdrop";
+import SectionFooterBar from "@/src/component/SectionFooterBar";
 import { getDictionary } from "@/lib/content";
 import type { Locale } from "@/lib/content/types";
 
@@ -67,24 +69,36 @@ export default function Home() {
       <div ref={manifestoRef} className="snap-section">
         <Manifesto />
       </div>
-      <div ref={partnersRef} className="snap-section">
+      <div ref={partnersRef} className="relative z-0 snap-section lg:min-h-screen flex flex-col justify-center bg-white dark:bg-[#070707]">
+        <SectionBackdrop index={2} />
         <LogoPartners />
         <PartnerInvite />
+        <SectionFooterBar index={2} total={sections.length} label={dict.sectionNav.partners} />
       </div>
-      <div ref={valueRef} className="snap-section">
+      <div ref={valueRef} className="relative z-0 snap-section lg:min-h-screen flex flex-col justify-center bg-white dark:bg-[#070707]">
+        <SectionBackdrop index={3} />
         <ValueProposition />
+        <SectionFooterBar index={3} total={sections.length} label={dict.sectionNav.value} />
       </div>
-      <div ref={stackRef} className="snap-section">
+      <div ref={stackRef} className="relative z-0 snap-section lg:min-h-screen flex flex-col justify-center bg-white dark:bg-[#070707]">
+        <SectionBackdrop index={4} />
         <StackShowcase />
+        <SectionFooterBar index={4} total={sections.length} label={dict.sectionNav.stack} />
       </div>
-      <div ref={focusRef} className="snap-section">
+      <div ref={focusRef} className="relative z-0 snap-section lg:min-h-screen flex flex-col justify-center bg-white dark:bg-[#070707]">
+        <SectionBackdrop index={5} />
         <FocusAreas />
+        <SectionFooterBar index={5} total={sections.length} label={dict.sectionNav.focus} />
       </div>
-      <div ref={servicesRef} className="snap-section">
+      <div ref={servicesRef} className="relative z-0 snap-section lg:min-h-screen flex flex-col justify-center bg-white dark:bg-[#070707]">
+        <SectionBackdrop index={6} />
         <Services />
+        <SectionFooterBar index={6} total={sections.length} label={dict.sectionNav.services} />
       </div>
-      <div ref={ctaRef} className="snap-section">
+      <div ref={ctaRef} className="relative z-0 snap-section lg:min-h-screen flex flex-col justify-center bg-white dark:bg-[#070707]">
+        <SectionBackdrop index={7} />
         <CtaGrid />
+        <SectionFooterBar index={7} total={sections.length} label={dict.sectionNav.cta} />
       </div>
     </div>
   )

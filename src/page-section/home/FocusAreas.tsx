@@ -35,7 +35,7 @@ export default function FocusAreas() {
             <Tag>
                 <Typography size={14} sizeMobile={12} weight={500}>{dict.focusAreas.eyebrow}</Typography>
             </Tag>
-            <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff] mt-[24px] max-w-[640px]">
+            <div className="font-display text-[32px] md:text-[48px] font-semibold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff] mt-[24px] max-w-[640px]">
                 {dict.focusAreas.title[0]} <br />
                 {dict.focusAreas.title[1]}
             </div>

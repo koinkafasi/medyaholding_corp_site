@@ -76,7 +76,7 @@ export default function Header({ mobileOpen = false, onOpenMobileNav }: HeaderPr
     >
       {/* Logo */}
       <Link href="/" className="w-[40%] lg:w-[15%] cursor-pointer flex justify-start items-center">
-        <Image src={Logo} alt="Medya Holding" priority className="h-8 md:h-10 w-auto object-contain" />
+        <Image src={Logo} alt="Medya Holding" priority className="h-11 md:h-16 w-auto object-contain" />
       </Link>
 
       {/* Navigation */}

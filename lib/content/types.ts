@@ -79,6 +79,9 @@ export interface Dictionary {
   };
 
   ctaGrid: {
+    label: string;
+    title: string;
+    subtitle: string;
     items: { title: string; desc: string; ctaLabel: string; href: string }[];
   };
 

@@ -7,6 +7,8 @@ import { useTheme } from "@/src/context/ThemeProvider";
 
 import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
+import SectionBackdrop from "@/src/component/SectionBackdrop";
+import SectionFooterBar from "@/src/component/SectionFooterBar";
 import { getDictionary } from "@/lib/content";
 import type { Locale } from "@/lib/content/types";
 
@@ -20,7 +22,7 @@ export default function Manifesto() {
     useEffect(() => {
         if (!statementRef.current) return
 
-        const chars = statementRef.current.querySelectorAll("span")
+        const chars = statementRef.current.querySelectorAll(".char")
 
         gsap.set(chars, { opacity: 1, color: "#8D8D8D" })
 
@@ -43,25 +45,34 @@ export default function Manifesto() {
     }, [theme, statement])
 
     return (
-        <div className="min-h-screen flex flex-col items-start justify-center bg-white dark:bg-[#070707] w-full px-[20px] md:px-[72px] py-[64px]">
+        <div className="relative z-0 min-h-screen flex flex-col items-start justify-center bg-white dark:bg-[#070707] w-full px-[20px] md:px-[72px] py-[64px]">
+            <SectionBackdrop index={1} />
             <Tag>
                 <Typography size={14} sizeMobile={12} weight={500}>{dict.homeManifesto.label}</Typography>
             </Tag>
             <div
                 key={statement}
                 ref={statementRef}
-                className="mt-[32px] md:mt-[40px] text-[32px] md:text-[56px] lg:text-[64px] font-semibold leading-[40px] md:leading-[68px] lg:leading-[76px] max-w-[900px]"
+                className="font-display mt-[32px] md:mt-[40px] text-[36px] md:text-[64px] lg:text-[76px] font-semibold leading-[44px] md:leading-[76px] lg:leading-[88px] max-w-[960px]"
                 style={{ whiteSpace: "pre-wrap" }}
             >
-                {statement.split("").map((char, index) => (
-                    <span key={index} className="inline-block">
-                        {char}
-                    </span>
-                ))}
+                {statement.split(" ").flatMap((word, wi, arr) => {
+                    const wordEl = (
+                        <span key={`w-${wi}`} className="inline-block whitespace-nowrap">
+                            {word.split("").map((char, ci) => (
+                                <span key={ci} className="inline-block char">
+                                    {char}
+                                </span>
+                            ))}
+                        </span>
+                    );
+                    return wi < arr.length - 1 ? [wordEl, " "] : [wordEl];
+                })}
             </div>
             <Typography size={18} className="mt-[32px] max-w-[560px]">
                 {dict.homeManifesto.subtitle}
             </Typography>
+            <SectionFooterBar index={1} total={8} label={dict.sectionNav.philosophy} />
         </div>
     )
 }

@@ -33,7 +33,7 @@ export default function StackShowcase() {
             <Tag>
                 <Typography size={14} sizeMobile={12} weight={500}>{dict.stackShowcase.eyebrow}</Typography>
             </Tag>
-            <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff] mt-[24px] max-w-[640px]">
+            <div className="font-display text-[32px] md:text-[48px] font-semibold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff] mt-[24px] max-w-[640px]">
                 {dict.stackShowcase.title[0]} <br />
                 {dict.stackShowcase.title[1]}
             </div>

@@ -6,11 +6,13 @@ interface Props {
     component?: React.ReactNode
     /** Optional background video (opt-in per hero); falls back to the static image if omitted. */
     videoSrc?: string
+    /** Opt-in full viewport height, used only by the home page's full-screen hero slide. */
+    fullHeight?: boolean
 }
 export default function HeroBackground(props: Props) {
-    const { children, component, videoSrc } = props
+    const { children, component, videoSrc, fullHeight = false } = props
     return (
-        <div className="relative overflow-hidden min-h-screen flex flex-col">
+        <div className={`relative overflow-hidden flex flex-col ${fullHeight ? "min-h-screen" : ""}`}>
             <div className="absolute inset-0 w-full h-full -z-20 bg-[#050810]">
                 {videoSrc ? (
                     <video
@@ -32,7 +34,7 @@ export default function HeroBackground(props: Props) {
                 )}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#050810]/40 via-[#050810]/70 to-[#050810]" />
             </div>
-            <div className="flex-1 flex flex-col justify-between px-[20px] pb-[48px] pt-[118px] md:px-[72px] md:pb-[80px] lg:pt-[192px]">
+            <div className={`px-[20px] pb-[48px] pt-[118px] md:px-[72px] md:pb-[80px] lg:pt-[192px] ${fullHeight ? "flex-1 flex flex-col justify-between" : ""}`}>
                 {children}
             </div>
             {component}

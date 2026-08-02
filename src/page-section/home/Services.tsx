@@ -82,7 +82,7 @@ export default function Services() {
                 <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end self-stretch gap-[16px]">
                     <div className="flex flex-col items-start gap-[24px]">
                         <Tag>{dict.homeServices.label}</Tag>
-                        <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6}>
+                        <Typography as="div" size={48} sizeMobile={32} weight={600} lineHeight={56} lineHeightMobile={41.6} className="font-display">
                             {dict.homeServices.title[0]} <br />
                             {dict.homeServices.title[1]}
                         </Typography>
@@ -99,32 +99,31 @@ export default function Services() {
                         </div>
                     </div>
                 </div>
-                <div ref={listRef} className="flex flex-col items-start gap-[51px] mt-[48px] md:mt-[64px]">
+                <div ref={listRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] mt-[48px] md:mt-[64px]">
                     {services.map((service, idx) => (
                         <div
                             key={idx}
                             ref={(el) => {
                                 if (el) cardsRef.current[idx] = el;
                             }}
-                            className="flex flex-col lg:flex-row items-center justify-between w-full gap-[24px]"
+                            className="flex flex-col items-start gap-[16px]"
                             style={{ padding: 0, backgroundColor: "transparent", borderRadius: "12px" }}
                         >
+                            <Image src={service.image} alt={service.title} className="w-full h-[160px] object-cover rounded-[16px]" />
                             <Typography
                                 as="div"
-                                size={32}
-                                sizeMobile={28}
+                                size={22}
+                                sizeMobile={20}
                                 weight={600}
-                                lineHeight={40}
-                                className="w-full lg:w-[25%]"
+                                lineHeight={28}
                             >
                                 {service.title}
                             </Typography>
-                            <Image src={service.image} alt={service.title} className="w-full lg:w-[20rem] rounded-[20px] order-3 lg:order-2" />
                             <Typography
                                 as="div"
                                 size={14}
                                 lineHeight={20}
-                                className="w-full order-2 lg:w-[30%] lg:order-3 opacity-70"
+                                className="opacity-70"
                             >
                                 {service.desc}
                             </Typography>

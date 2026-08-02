@@ -27,7 +27,7 @@ export default function AboutUs() {
     useEffect(() => {
         if (!descAboutUsRef.current) return
 
-        const chars = descAboutUsRef.current.querySelectorAll("span")
+        const chars = descAboutUsRef.current.querySelectorAll(".char")
 
         gsap.set(chars, { opacity: 1, color: "#8D8D8D" })
 
@@ -75,11 +75,18 @@ export default function AboutUs() {
                 </div>
                 <div className="w-full md:flex-1 flex flex-col gap-[48px] md:gap-[80px]">
                     <div key={descAboutUs} ref={descAboutUsRef} className="text-[28px] md:text-[40px] font-semibold leading-[36.8px] md:leading-[48px]" style={{ whiteSpace: "pre-wrap" }}>
-                        {descAboutUs.split("").map((char, index) => (
-                            <span key={index} className="inline-block">
-                                {char}
-                            </span>
-                        ))}
+                        {descAboutUs.split(" ").flatMap((word, wi, arr) => {
+                            const wordEl = (
+                                <span key={`w-${wi}`} className="inline-block whitespace-nowrap">
+                                    {word.split("").map((char, ci) => (
+                                        <span key={ci} className="inline-block char">
+                                            {char}
+                                        </span>
+                                    ))}
+                                </span>
+                            );
+                            return wi < arr.length - 1 ? [wordEl, " "] : [wordEl];
+                        })}
                     </div>
                     <div className="flex flex-col md:flex-row justify-between gap-[32px]">
                         {dict.aboutUs.items.map((item, idx) => (

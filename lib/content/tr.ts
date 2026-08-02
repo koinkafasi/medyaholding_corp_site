@@ -115,6 +115,9 @@ export const tr: Dictionary = {
   },
 
   ctaGrid: {
+    label: "Sonraki Adım",
+    title: "Birlikte Ne İnşa Edelim?",
+    subtitle: "İster ortak olmak, ister portföyümüzü incelemek, ister ekibimize katılmak isteyin — başlamanın en hızlı yolu burada.",
     items: [
       { title: "İletişime Geçin", desc: "Ne inşa ettiğinizi bize anlatın.", ctaLabel: "İletişim", href: "/contact" },
       { title: "Çalışmalarımızı Görün", desc: "Portföyden bir seçki.", ctaLabel: "Portföyü gör", href: "/portofolio" },

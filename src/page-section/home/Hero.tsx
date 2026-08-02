@@ -18,7 +18,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
   const dict = getDictionary(useLocale() as Locale);
 
   return (
-    <HeroBackground videoSrc="/videos/hero-bg.mp4">
+    <HeroBackground videoSrc="/videos/hero-bg.mp4" fullHeight>
       <div className="flex flex-col lg:flex-row justify-between items-start self-stretch gap-[8px]">
         {/* Text Section */}
         <div className="w-full lg:w-[75%]">
@@ -39,6 +39,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
             letterSpacing={-2.16}
             letterSpacingMobile={-1.2}
             noDarkMode
+            className="font-display"
           >
             {dict.homeHero.title.map((line, i) => {
               const highlight = dict.homeHero.titleHighlight;
