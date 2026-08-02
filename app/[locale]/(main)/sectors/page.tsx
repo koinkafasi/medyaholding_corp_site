@@ -6,7 +6,6 @@ import React, { Suspense } from "react";
 
 const Hero = React.lazy(() => import('@/src/page-section/sectors/Hero'));
 const SectorsList = React.lazy(() => import('@/src/page-section/sectors/SectorsList'));
-const Faq = React.lazy(() => import('@/src/page-section/Faq'));
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -18,7 +17,6 @@ export default function Sectors() {
             <Suspense>
                 <Hero />
                 <SectorsList />
-                <Faq />
             </Suspense>
         </div>
     )

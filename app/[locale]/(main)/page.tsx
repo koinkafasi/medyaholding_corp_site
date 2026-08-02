@@ -14,10 +14,7 @@ import ValueProposition from "@/src/page-section/home/ValueProposition";
 import StackShowcase from "@/src/page-section/home/StackShowcase";
 import FocusAreas from "@/src/page-section/home/FocusAreas";
 import Services from "@/src/page-section/home/Services";
-import LatestProject from "@/src/page-section/home/LatestProject";
 import CtaGrid from "@/src/page-section/home/CtaGrid";
-import Pricing from "@/src/page-section/PricingSection";
-import Faq from "@/src/page-section/Faq";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -49,10 +46,7 @@ export default function Home() {
       <StackShowcase />
       <FocusAreas />
       <Services />
-      <LatestProject />
       <CtaGrid />
-      <Pricing />
-      <Faq />
     </div>
   )
 }

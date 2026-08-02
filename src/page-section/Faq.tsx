@@ -10,7 +10,7 @@ export default function Faq() {
     const dict = getDictionary(useLocale() as Locale);
     const accordionData: AccordionData[] = dict.faq.items;
     return (
-        <div className="bg-white dark:bg-[#070707] w-full px-[16px] md:px-[72px] py-[48px] md:py-[80px]">
+        <div id="faq" className="bg-white dark:bg-[#070707] w-full px-[16px] md:px-[72px] py-[48px] md:py-[80px]">
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end w-full gap-[16px]">
                 <div className="flex flex-col items-start gap-[24px]">
                     <Tag>

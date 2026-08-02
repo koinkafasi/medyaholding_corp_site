@@ -82,7 +82,7 @@ export default function Footer() {
               <div className="flex flex-col items-start gap-[16px] text-white">
                 <Link href="/careers" className="cursor-pointer">{dict.footer.careers}</Link>
                 <Link href="/sustainability" className="cursor-pointer">{dict.nav.sustainability}</Link>
-                <div className="cursor-pointer">{dict.footer.faqLabel}</div>
+                <Link href="/contact#faq" className="cursor-pointer">{dict.footer.faqLabel}</Link>
                 <Link href="/contact" className="cursor-pointer">{dict.footer.contactUs}</Link>
               </div>
             </div>
