@@ -7,8 +7,6 @@ import Typography from "@/src/component/Typography";
 import { getDictionary } from "@/lib/content";
 import type { Locale } from "@/lib/content/types";
 
-const YOUTUBE_ID = "DWpgd03ouZY";
-
 export default function CorporateVideo() {
     const dict = getDictionary(useLocale() as Locale);
     const [playing, setPlaying] = useState(false);
@@ -31,12 +29,13 @@ export default function CorporateVideo() {
 
             <div className="relative mt-[64px] w-full aspect-video rounded-[12px] overflow-hidden bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] dark:border-[#1D1D1D]">
                 {playing ? (
-                    <iframe
-                        className="absolute inset-0 w-full h-full"
-                        src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0`}
-                        title={dict.corporateVideo.title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
+                    <video
+                        className="absolute inset-0 w-full h-full object-cover"
+                        src="/videos/corporate.mp4"
+                        poster="/videos/corporate-poster.jpg"
+                        controls
+                        autoPlay
+                        playsInline
                     />
                 ) : (
                     <button
@@ -45,7 +44,7 @@ export default function CorporateVideo() {
                         aria-label={dict.corporateVideo.title}
                         className="group absolute inset-0 w-full h-full"
                         style={{
-                            backgroundImage: `url(https://i.ytimg.com/vi/${YOUTUBE_ID}/maxresdefault.jpg)`,
+                            backgroundImage: "url(/videos/corporate-poster.jpg)",
                             backgroundSize: "cover",
                             backgroundPosition: "center",
                         }}
