@@ -2,10 +2,11 @@
 
 import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Navigation from "./Navigation";
-import Logo from "@/src/assets/images/Logo.svg";
+import Logo from "@/src/assets/images/logo-nav.png";
 import Switch from "./Switch";
 import Icons from "./Icons";
 import LanguageToggle from "./LanguageToggle";
@@ -75,7 +76,7 @@ export default function Header({ mobileOpen = false, onOpenMobileNav }: HeaderPr
     >
       {/* Logo */}
       <Link href="/" className="w-[40%] lg:w-[15%] cursor-pointer flex justify-start items-center">
-        <Logo />
+        <Image src={Logo} alt="Medya Holding" priority className="h-8 md:h-10 w-auto object-contain" />
       </Link>
 
       {/* Navigation */}

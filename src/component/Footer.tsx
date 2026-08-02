@@ -1,10 +1,11 @@
 "use client";
 
 import { useLocale } from "next-intl";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import Button from "./Button";
 
-import Logo from "@/src/assets/images/Logo.svg";
+import Logo from "@/src/assets/images/logo-footer.png";
 import XLogo from "@/src/assets/images/XLogo.svg";
 import InstagramLogo from "@/src/assets/images/InstagramLogo.svg";
 import LinkedinLogo from "@/src/assets/images/LinkedinLogo.svg";
@@ -46,7 +47,7 @@ export default function Footer() {
         <div className="mt-[64px] md:mt-[107px] flex flex-col lg:flex-row items-start justify-between gap-[48px]">
           {/* Brand Section */}
           <div className="flex flex-col gap-[24px] w-[70%] lg:w-[20%]">
-            <Logo className="w-full h-auto" />
+            <Image src={Logo} alt="Medya Holding" className="w-[160px] md:w-[180px] h-auto" />
             <div className="font-medium text-white leading-[24px]">
               {dict.footer.tagline}
             </div>
